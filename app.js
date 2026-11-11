@@ -30,7 +30,7 @@
   }
 
   function render(p, booklet, data, pageNo){
-    const page = h('div', {class: 'page', style: '--accent:' + booklet.color});
+    const page = h('div', {class: 'page', style: '--accent:' + booklet.color + ';--accent-ink:' + (booklet.ink || booklet.color)});
     page.append(photoCol(p));
 
     const main = h('div', {class: 'pg-main'});
