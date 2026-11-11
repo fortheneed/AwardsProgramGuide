@@ -15,6 +15,7 @@
   .bar select{min-width:0}
   .bar button{cursor:pointer;background:#fff;color:#002C66;font-weight:700;white-space:nowrap}
   .bar .sp{flex:1}
+  body.is-mobile #printBtn{display:none}
   .viewer{flex:1;position:relative;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
   .viewer.mobile{display:block;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding:10px}
   .stage{position:relative}
@@ -37,10 +38,9 @@
   #printArea{display:none}
   @media (max-width:700px){
     .bar strong{display:none}
-    .bar label{flex:1 1 40%}
+    .bar label{flex:1 1 auto}
     .bar label select{flex:1;width:100%}
     .bar .sp{display:none}
-    .bar button{flex:1 1 100%;min-height:36px;padding:6px 10px}
     .pager button{min-width:88px}
   }
   @media print{
@@ -54,7 +54,7 @@
 <div class="bar noprint">
   <strong>Awards Program Guide</strong>
   <label>Type <select id="aud"></select></label>
-  <label>Page <select id="jump"></select></label>
+  <button id="tocBtn">&#9776; Contents</button>
   <span class="sp"></span>
   <button id="printBtn">Print this booklet</button>
 </div>
@@ -70,7 +70,7 @@
 (async function(){
   const G = AwardsGuide, PW = G.PW, PH = G.PH;
   const data = await G.load();
-  const audSel = document.getElementById('aud'), jump = document.getElementById('jump');
+  const audSel = document.getElementById('aud');
   const stage = document.getElementById('stage'), viewer = document.getElementById('viewer');
   const prevB = document.getElementById('prev'), nextB = document.getElementById('next'), pos = document.getElementById('pos');
   data.booklets.forEach(b => audSel.append(new Option(b.title, b.id)));
@@ -79,12 +79,10 @@
   const isMobile = () => window.innerWidth < 700 || window.innerHeight < 560;
 
   function chooseBooklet(id, page){
-    booklet = data.booklets.find(b => b.id === id) || data.booklets[0];
+    const bk = G.booklet(data, id);
+    booklet = bk.booklet; pages = bk.pages;
     audSel.value = booklet.id;
-    pages = data.pages.filter(p => p.audiences.includes(booklet.id));
     cur = Math.min(Math.max(page || 0, 0), pages.length - 1);
-    jump.replaceChildren();
-    pages.forEach((p, i) => jump.append(new Option(i === 0 ? 'Cover' : (i + 1) + '. ' + p.title, i)));
     // Printing always uses the full Letter-size pages, one per sheet.
     const pa = document.getElementById('printArea'); pa.replaceChildren();
     pages.forEach((p, i) => pa.append(G.wrap(G.render(p, booklet, data, i + 1))));
@@ -94,6 +92,7 @@
   function show(dir){
     const mobile = isMobile();
     lastMode = mobile; lastW = window.innerWidth;
+    document.body.classList.toggle('is-mobile', mobile);
     viewer.classList.toggle('mobile', mobile);
     const el = document.createElement('div');
     el.className = 'spread' + (dir ? ' go-' + dir : '');
@@ -107,22 +106,28 @@
     }
     stage.replaceChildren(el);
     viewer.scrollTop = 0;
-    jump.value = String(cur);
-    pos.textContent = cur === 0 ? 'Cover' : 'Page ' + (cur + 1) + ' of ' + pages.length;
+    pos.textContent = cur === 0 ? 'Cover' : cur === 1 ? 'Contents' : 'Page ' + (cur + 1) + ' of ' + pages.length;
     prevB.disabled = cur === 0; nextB.disabled = cur === pages.length - 1;
     try{ history.replaceState(null, '', '#' + booklet.id + '/' + (cur + 1)); }catch(e){}
   }
 
-  function go(delta){
-    const n = cur + delta;
+  function goTo(n, dir){
     if(n < 0 || n >= pages.length) return;
-    cur = n; show(delta > 0 ? 'next' : 'prev');
+    cur = n; show(dir || (n > cur ? 'next' : 'prev'));
   }
+  const go = (d) => { const n = cur + d; if(n >= 0 && n < pages.length){ cur = n; show(d > 0 ? 'next' : 'prev'); } };
 
   prevB.onclick = () => go(-1); nextB.onclick = () => go(1);
   audSel.onchange = () => chooseBooklet(audSel.value, 0);
-  jump.onchange = () => { cur = +jump.value; show(null); };
+  document.getElementById('tocBtn').onclick = () => { cur = 1; show('prev'); };
   document.getElementById('printBtn').onclick = () => window.print();
+  // Contents links turn to the page they name.
+  stage.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('a[data-page]');
+    if(!a) return;
+    e.preventDefault();
+    cur = +a.dataset.page; show('next');
+  });
   document.addEventListener('keydown', e => {
     if(e.target && /SELECT|INPUT/.test(e.target.tagName)) return;
     if(e.key === 'ArrowRight') go(1); else if(e.key === 'ArrowLeft') go(-1);

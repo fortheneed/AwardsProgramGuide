@@ -4,14 +4,16 @@ Fill in the blanks under each page. Anything left blank shows a placeholder. For
 and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. You can also paste text in chat and I'll enter it.
 
 - **Badge image**: the charm artwork (square PNG, about 600×600, transparent background is best).
-- **Photo**: tall photo for the left side of the page (portrait, at least 900×1800).
-- **Photo 2**: optional round photo at the bottom right.
+- **Photo**: tall photo for the left side of the printed page (portrait, at least 900×1800). It is not shown on phones.
+- **Photo 2**: optional round photo at the bottom right. It is shown on phones too.
 - Pages marked **(shared)** appear in more than one booklet and use the same wording in each.
-- The Major Targets & Get a Job/Internship page and the School & Career page already hold *sample wording* so you can judge the layout — replace it.
+- Every booklet also gets an automatic **cover** and an automatic **Table of Contents** (page 2). Nothing to fill in for the contents.
+- Ticket amounts (Major 200, Minor 30, Bullseye 200, attendance tiers 10/20/40) are filled in automatically.
+- The Get a Job/Internship page and the School & Career page already hold *sample wording* so you can judge the layout — replace it.
 
 ---
 
-## 1. Arrow Awards Program Guide
+## 1. Arrowchievements Guide
 - **Booklets:** Arrows
 - **Welcome text** (optional - a short line under the title. Leave blank for a title-only cover):
   > 
@@ -41,8 +43,8 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 5. Get a Job/Internship (shared)
 - **Booklets:** Arrows, Arrow Alumni
-- **Category:** Major Target
-- **How it's recorded:** Manual · 200 tickets (Arrows/Alumni)
+- **Category:** Major Target – 200 Tickets
+- **How it's recorded:** Manual
 - **Intro paragraph:** Sample wording - replace with your own. Whether you're looking for your very first job or an internship that opens a door, this charm celebrates the courage it takes to go out and get hired.
 - **Steps** (one per line, up to ~6):
   1. Decide what kind of work interests you
@@ -60,8 +62,8 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 6. Get Your Driver's License (shared)
 - **Booklets:** Arrows, Arrow Alumni
-- **Category:** Major Target
-- **How it's recorded:** Manual · 200 tickets (Arrows/Alumni)
+- **Category:** Major Target – 200 Tickets
+- **How it's recorded:** Manual
 - **Intro paragraph:** 
 - **Steps** (one per line, up to ~6):
   1. 
@@ -79,8 +81,8 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 7. Graduate Junior High (shared)
 - **Booklets:** Arrows, Arrow Alumni
-- **Category:** Major Target
-- **How it's recorded:** Manual · 200 tickets (Arrows/Alumni)
+- **Category:** Major Target – 200 Tickets
+- **How it's recorded:** Manual
 - **Intro paragraph:** 
 - **Steps** (one per line, up to ~6):
   1. 
@@ -98,8 +100,8 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 8. Graduate High School (shared)
 - **Booklets:** Arrows, Arrow Alumni
-- **Category:** Major Target
-- **How it's recorded:** Manual · 200 tickets (Arrows/Alumni)
+- **Category:** Major Target – 200 Tickets
+- **How it's recorded:** Manual
 - **Intro paragraph:** 
 - **Steps** (one per line, up to ~6):
   1. 
@@ -117,8 +119,8 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 9. Become a Crossbow/Bow (shared)
 - **Booklets:** Arrows, Arrow Alumni
-- **Category:** Major Target
-- **How it's recorded:** Manual · 200 tickets (Arrows/Alumni)
+- **Category:** Major Target – 200 Tickets
+- **How it's recorded:** Manual
 - **Intro paragraph:** 
 - **Steps** (one per line, up to ~6):
   1. 
@@ -136,8 +138,8 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 10. Accepted at College/Trade School (shared)
 - **Booklets:** Arrows, Arrow Alumni
-- **Category:** Major Target
-- **How it's recorded:** Manual · 200 tickets (Arrows/Alumni)
+- **Category:** Major Target – 200 Tickets
+- **How it's recorded:** Manual
 - **Intro paragraph:** 
 - **Steps** (one per line, up to ~6):
   1. 
@@ -155,7 +157,7 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 11. School & Career
 - **Booklets:** Arrows
-- **Category:** Minor Targets
+- **Category:** Minor Targets – 30 Tickets
 - **Intro paragraph:** Sample wording - replace with your own. These four Minor Targets help you get ready for what comes after school. Each one you complete earns its own charm.
 - **Charms on this page** (one-liner + badge image each):
   - **Join School Leadership** · 30 tickets: Sample line - one sentence about this charm.  | badge image: 
@@ -170,7 +172,7 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 12. Faith & Memorization
 - **Booklets:** Arrows
-- **Category:** Minor Targets
+- **Category:** Minor Targets – 30 Tickets
 - **Intro paragraph:** 
 - **Charms on this page** (one-liner + badge image each):
   - **Memorize Arrow Statement** · 30 tickets:   | badge image: 
@@ -183,7 +185,7 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 13. Life Skills
 - **Booklets:** Arrows
-- **Category:** Minor Targets
+- **Category:** Minor Targets – 30 Tickets
 - **Intro paragraph:** 
 - **Charms on this page** (one-liner + badge image each):
   - **Learn to Swim** · 30 tickets:   | badge image: 
@@ -198,7 +200,7 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 14. Stage & Competition
 - **Booklets:** Arrows
-- **Category:** Minor Targets
+- **Category:** Minor Targets – 30 Tickets
 - **Intro paragraph:** 
 - **Charms on this page** (one-liner + badge image each):
   - **Public Speaking** · 30 tickets:   | badge image: 
@@ -214,8 +216,8 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 15. Connected Online
 - **Booklets:** Arrows
-- **Category:** Minor Target
-- **How it's recorded:** Manual · 30 tickets (Arrows/Alumni)
+- **Category:** Minor Target – 30 Tickets
+- **How it's recorded:** Manual
 - **Intro paragraph:** 
 - **Steps** (one per line, up to ~6):
   1. 
@@ -233,8 +235,8 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 16. Bullseye Award
 - **Booklets:** Arrows
-- **Category:** Bullseye
-- **How it's recorded:** Manual - custom text per person, one per person · 200 tickets (Arrows/Alumni)
+- **Category:** Bullseye Award – 200 Tickets
+- **How it's recorded:** Manual - custom text per person, one per person
 - **Intro paragraph:** 
 - **Steps** (one per line, up to ~6):
   1. 
@@ -252,7 +254,7 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 17. Attendance Milestones
 - **Booklets:** Arrows
-- **Category:** Attendance (automatic)
+- **Category:** Attendance
 - **Intro paragraph:** 
 - **Charms on this page** (one-liner + badge image each):
   - **Bronze (2 events)** · 10 tickets:   | badge image: 
@@ -266,8 +268,8 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 18. Attendance - 5 in a Row
 - **Booklets:** Arrows
-- **Category:** Attendance (automatic)
-- **How it's recorded:** Automatic · 30 tickets (Arrows/Alumni)
+- **Category:** Attendance – 30 Tickets
+- **How it's recorded:** Automatic
 - **Intro paragraph:** 
 - **Steps** (one per line, up to ~6):
   1. 
@@ -285,7 +287,7 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 19. Volunteer Attendance Milestones (shared)
 - **Booklets:** Volunteers, Arrow Alumni
-- **Category:** Attendance (automatic)
+- **Category:** Attendance
 - **Intro paragraph:** 
 - **Charms on this page** (one-liner + badge image each):
   - **Bronze (2 events)**:   | badge image: 
@@ -299,7 +301,7 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 20. Volunteer Attendance 5 in a Row (shared)
 - **Booklets:** Volunteers, Arrow Alumni
-- **Category:** Attendance (automatic)
+- **Category:** Attendance
 - **How it's recorded:** Automatic
 - **Intro paragraph:** 
 - **Steps** (one per line, up to ~6):
@@ -318,7 +320,7 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 21. Attended 6 Events in a Year (shared)
 - **Booklets:** Volunteers, Arrow Alumni
-- **Category:** Attendance (automatic)
+- **Category:** Attendance
 - **How it's recorded:** Automatic
 - **Intro paragraph:** 
 - **Steps** (one per line, up to ~6):
@@ -337,7 +339,7 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 22. Volunteered 100 Hours (shared)
 - **Booklets:** Volunteers, Arrow Alumni
-- **Category:** Service (automatic)
+- **Category:** Service & Leadership
 - **How it's recorded:** Automatic - from volunteer hours
 - **Intro paragraph:** 
 - **Steps** (one per line, up to ~6):
@@ -354,9 +356,9 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ---
 
-## 23. Live Scan/Megan's Law Status (shared)
+## 23. Donate or Raise $1000 (shared)
 - **Booklets:** Volunteers, Arrow Alumni
-- **Category:** Safety & Training
+- **Category:** Service & Leadership
 - **How it's recorded:** Manual
 - **Intro paragraph:** 
 - **Steps** (one per line, up to ~6):
@@ -373,7 +375,83 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ---
 
-## 24. Co-Mentor (shared)
+## 24. Teacher (shared)
+- **Booklets:** Volunteers, Arrow Alumni
+- **Category:** Service & Leadership
+- **How it's recorded:** Manual
+- **Intro paragraph:** 
+- **Steps** (one per line, up to ~6):
+  1. 
+  2. 
+  3. 
+  4. 
+  5. 
+- **Purpose** ("When I've earned this charm, I will have…"): 
+- **Quote** (optional):   — 
+- **Badge image:** 
+- **Photo:** 
+- **Photo 2 (optional):** 
+
+---
+
+## 25. Breakout Event Lead (shared)
+- **Booklets:** Volunteers, Arrow Alumni
+- **Category:** Service & Leadership
+- **How it's recorded:** Manual
+- **Intro paragraph:** 
+- **Steps** (one per line, up to ~6):
+  1. 
+  2. 
+  3. 
+  4. 
+  5. 
+- **Purpose** ("When I've earned this charm, I will have…"): 
+- **Quote** (optional):   — 
+- **Badge image:** 
+- **Photo:** 
+- **Photo 2 (optional):** 
+
+---
+
+## 26. Spanish Translator (shared)
+- **Booklets:** Volunteers, Arrow Alumni, Parents/Guardians
+- **Category:** Service & Leadership
+- **How it's recorded:** Manual
+- **Intro paragraph:** 
+- **Steps** (one per line, up to ~6):
+  1. 
+  2. 
+  3. 
+  4. 
+  5. 
+- **Purpose** ("When I've earned this charm, I will have…"): 
+- **Quote** (optional):   — 
+- **Badge image:** 
+- **Photo:** 
+- **Photo 2 (optional):** 
+
+---
+
+## 27. Succeeded Under Pressure (shared)
+- **Booklets:** Volunteers, Arrow Alumni, Parents/Guardians
+- **Category:** Service & Leadership
+- **How it's recorded:** Manual
+- **Intro paragraph:** 
+- **Steps** (one per line, up to ~6):
+  1. 
+  2. 
+  3. 
+  4. 
+  5. 
+- **Purpose** ("When I've earned this charm, I will have…"): 
+- **Quote** (optional):   — 
+- **Badge image:** 
+- **Photo:** 
+- **Photo 2 (optional):** 
+
+---
+
+## 28. Co-Mentor (shared)
 - **Booklets:** Volunteers, Arrow Alumni
 - **Category:** Mentoring
 - **How it's recorded:** Manual
@@ -392,7 +470,7 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ---
 
-## 25. Has a Mentee (shared)
+## 29. Has a Mentee (shared)
 - **Booklets:** Volunteers, Arrow Alumni
 - **Category:** Mentoring
 - **How it's recorded:** Manual (the Mentee Name field is recorded with this charm)
@@ -411,7 +489,83 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ---
 
-## 26. Connected Online - Volunteer (shared)
+## 30. Live Scan/Megan's Law Status (shared)
+- **Booklets:** Volunteers, Arrow Alumni
+- **Category:** Safety & Training
+- **How it's recorded:** Manual
+- **Intro paragraph:** 
+- **Steps** (one per line, up to ~6):
+  1. 
+  2. 
+  3. 
+  4. 
+  5. 
+- **Purpose** ("When I've earned this charm, I will have…"): 
+- **Quote** (optional):   — 
+- **Badge image:** 
+- **Photo:** 
+- **Photo 2 (optional):** 
+
+---
+
+## 31. Mandated Reporter (shared)
+- **Booklets:** Volunteers, Arrow Alumni
+- **Category:** Safety & Training
+- **How it's recorded:** Manual
+- **Intro paragraph:** 
+- **Steps** (one per line, up to ~6):
+  1. 
+  2. 
+  3. 
+  4. 
+  5. 
+- **Purpose** ("When I've earned this charm, I will have…"): 
+- **Quote** (optional):   — 
+- **Badge image:** 
+- **Photo:** 
+- **Photo 2 (optional):** 
+
+---
+
+## 32. Sexual Assault Prevention Training (shared)
+- **Booklets:** Volunteers, Arrow Alumni
+- **Category:** Safety & Training
+- **How it's recorded:** Manual
+- **Intro paragraph:** 
+- **Steps** (one per line, up to ~6):
+  1. 
+  2. 
+  3. 
+  4. 
+  5. 
+- **Purpose** ("When I've earned this charm, I will have…"): 
+- **Quote** (optional):   — 
+- **Badge image:** 
+- **Photo:** 
+- **Photo 2 (optional):** 
+
+---
+
+## 33. CPR Certified (shared)
+- **Booklets:** Volunteers, Arrow Alumni, Parents/Guardians
+- **Category:** Safety & Training
+- **How it's recorded:** Manual
+- **Intro paragraph:** 
+- **Steps** (one per line, up to ~6):
+  1. 
+  2. 
+  3. 
+  4. 
+  5. 
+- **Purpose** ("When I've earned this charm, I will have…"): 
+- **Quote** (optional):   — 
+- **Badge image:** 
+- **Photo:** 
+- **Photo 2 (optional):** 
+
+---
+
+## 34. Connected Online - Volunteer (shared)
 - **Booklets:** Volunteers, Arrow Alumni
 - **Category:** Connection
 - **How it's recorded:** Manual
@@ -430,161 +584,9 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ---
 
-## 27. CPR Certified (shared)
-- **Booklets:** Volunteers, Arrow Alumni, Parents/Guardians
-- **Category:** Safety & Training
-- **How it's recorded:** Manual
-- **Intro paragraph:** 
-- **Steps** (one per line, up to ~6):
-  1. 
-  2. 
-  3. 
-  4. 
-  5. 
-- **Purpose** ("When I've earned this charm, I will have…"): 
-- **Quote** (optional):   — 
-- **Badge image:** 
-- **Photo:** 
-- **Photo 2 (optional):** 
-
----
-
-## 28. Donate or Raise $1000 (shared)
-- **Booklets:** Volunteers, Arrow Alumni
-- **Category:** Service
-- **How it's recorded:** Manual
-- **Intro paragraph:** 
-- **Steps** (one per line, up to ~6):
-  1. 
-  2. 
-  3. 
-  4. 
-  5. 
-- **Purpose** ("When I've earned this charm, I will have…"): 
-- **Quote** (optional):   — 
-- **Badge image:** 
-- **Photo:** 
-- **Photo 2 (optional):** 
-
----
-
-## 29. Mandated Reporter (shared)
-- **Booklets:** Volunteers, Arrow Alumni
-- **Category:** Safety & Training
-- **How it's recorded:** Manual
-- **Intro paragraph:** 
-- **Steps** (one per line, up to ~6):
-  1. 
-  2. 
-  3. 
-  4. 
-  5. 
-- **Purpose** ("When I've earned this charm, I will have…"): 
-- **Quote** (optional):   — 
-- **Badge image:** 
-- **Photo:** 
-- **Photo 2 (optional):** 
-
----
-
-## 30. Refer a Volunteer (shared)
+## 35. Refer a Volunteer (shared)
 - **Booklets:** Volunteers, Arrow Alumni
 - **Category:** Connection
-- **How it's recorded:** Manual
-- **Intro paragraph:** 
-- **Steps** (one per line, up to ~6):
-  1. 
-  2. 
-  3. 
-  4. 
-  5. 
-- **Purpose** ("When I've earned this charm, I will have…"): 
-- **Quote** (optional):   — 
-- **Badge image:** 
-- **Photo:** 
-- **Photo 2 (optional):** 
-
----
-
-## 31. Sexual Assault Prevention Training (shared)
-- **Booklets:** Volunteers, Arrow Alumni
-- **Category:** Safety & Training
-- **How it's recorded:** Manual
-- **Intro paragraph:** 
-- **Steps** (one per line, up to ~6):
-  1. 
-  2. 
-  3. 
-  4. 
-  5. 
-- **Purpose** ("When I've earned this charm, I will have…"): 
-- **Quote** (optional):   — 
-- **Badge image:** 
-- **Photo:** 
-- **Photo 2 (optional):** 
-
----
-
-## 32. Spanish Translator (shared)
-- **Booklets:** Volunteers, Arrow Alumni, Parents/Guardians
-- **Category:** Service
-- **How it's recorded:** Manual
-- **Intro paragraph:** 
-- **Steps** (one per line, up to ~6):
-  1. 
-  2. 
-  3. 
-  4. 
-  5. 
-- **Purpose** ("When I've earned this charm, I will have…"): 
-- **Quote** (optional):   — 
-- **Badge image:** 
-- **Photo:** 
-- **Photo 2 (optional):** 
-
----
-
-## 33. Succeeded Under Pressure (shared)
-- **Booklets:** Volunteers, Arrow Alumni, Parents/Guardians
-- **Category:** Service
-- **How it's recorded:** Manual
-- **Intro paragraph:** 
-- **Steps** (one per line, up to ~6):
-  1. 
-  2. 
-  3. 
-  4. 
-  5. 
-- **Purpose** ("When I've earned this charm, I will have…"): 
-- **Quote** (optional):   — 
-- **Badge image:** 
-- **Photo:** 
-- **Photo 2 (optional):** 
-
----
-
-## 34. Teacher (shared)
-- **Booklets:** Volunteers, Arrow Alumni
-- **Category:** Service
-- **How it's recorded:** Manual
-- **Intro paragraph:** 
-- **Steps** (one per line, up to ~6):
-  1. 
-  2. 
-  3. 
-  4. 
-  5. 
-- **Purpose** ("When I've earned this charm, I will have…"): 
-- **Quote** (optional):   — 
-- **Badge image:** 
-- **Photo:** 
-- **Photo 2 (optional):** 
-
----
-
-## 35. Breakout Event Lead (shared)
-- **Booklets:** Volunteers, Arrow Alumni
-- **Category:** Service
 - **How it's recorded:** Manual
 - **Intro paragraph:** 
 - **Steps** (one per line, up to ~6):

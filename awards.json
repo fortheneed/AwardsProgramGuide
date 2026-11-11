@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "audienceOrder": [
   "arrows",
   "alumni",
@@ -10,41 +10,51 @@
   {
    "id": "arrows",
    "title": "Arrows",
-   "subtitle": "Arrow Awards Program Guide",
+   "subtitle": "Arrowchievements Guide",
    "color": "#79C900",
-   "ink": "#4E8A00"
+   "ink": "#4E8A00",
+   "coverText": "#201F1F",
+   "logo": "black"
   },
   {
    "id": "alumni",
    "title": "Arrow Alumni",
    "subtitle": "Arrow Alumni Awards Program Guide",
    "color": "#FFCC00",
-   "ink": "#8F6700"
+   "ink": "#8F6700",
+   "coverText": "#201F1F",
+   "logo": "black"
   },
   {
    "id": "volunteers",
    "title": "Volunteers",
    "subtitle": "Volunteer Awards Program Guide",
    "color": "#201F1F",
-   "ink": "#201F1F"
+   "ink": "#201F1F",
+   "coverText": "#FFFFFF",
+   "logo": "white"
   },
   {
    "id": "parents",
    "title": "Parents/Guardians",
    "subtitle": "Parent/Guardian Awards Program Guide",
    "color": "#0091FF",
-   "ink": "#0074CF"
+   "ink": "#0074CF",
+   "coverText": "#201F1F",
+   "logo": "black"
   }
  ],
  "pages": [
   {
    "id": "cover-arrows",
    "type": "cover",
-   "title": "Arrow Awards Program Guide",
+   "title": "Arrowchievements Guide",
    "audiences": [
     "arrows"
    ],
    "label": "",
+   "section": "",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -64,6 +74,8 @@
     "alumni"
    ],
    "label": "",
+   "section": "",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -83,6 +95,8 @@
     "volunteers"
    ],
    "label": "",
+   "section": "",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -102,6 +116,8 @@
     "parents"
    ],
    "label": "",
+   "section": "",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -122,6 +138,8 @@
     "alumni"
    ],
    "label": "Major Target",
+   "section": "Major Targets",
+   "tickets": 200,
    "intro": "Sample wording - replace with your own. Whether you're looking for your very first job or an internship that opens a door, this charm celebrates the courage it takes to go out and get hired.",
    "steps": [
     "Decide what kind of work interests you",
@@ -141,8 +159,7 @@
    "appIds": [
     "a1"
    ],
-   "earnedHow": "Manual",
-   "tickets": 200
+   "earnedHow": "Manual"
   },
   {
    "id": "major-a2",
@@ -153,6 +170,8 @@
     "alumni"
    ],
    "label": "Major Target",
+   "section": "Major Targets",
+   "tickets": 200,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -166,8 +185,7 @@
    "appIds": [
     "a2"
    ],
-   "earnedHow": "Manual",
-   "tickets": 200
+   "earnedHow": "Manual"
   },
   {
    "id": "major-a3",
@@ -178,6 +196,8 @@
     "alumni"
    ],
    "label": "Major Target",
+   "section": "Major Targets",
+   "tickets": 200,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -191,8 +211,7 @@
    "appIds": [
     "a3"
    ],
-   "earnedHow": "Manual",
-   "tickets": 200
+   "earnedHow": "Manual"
   },
   {
    "id": "major-a4",
@@ -203,6 +222,8 @@
     "alumni"
    ],
    "label": "Major Target",
+   "section": "Major Targets",
+   "tickets": 200,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -216,8 +237,7 @@
    "appIds": [
     "a4"
    ],
-   "earnedHow": "Manual",
-   "tickets": 200
+   "earnedHow": "Manual"
   },
   {
    "id": "major-a5",
@@ -228,6 +248,8 @@
     "alumni"
    ],
    "label": "Major Target",
+   "section": "Major Targets",
+   "tickets": 200,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -241,8 +263,7 @@
    "appIds": [
     "a5"
    ],
-   "earnedHow": "Manual",
-   "tickets": 200
+   "earnedHow": "Manual"
   },
   {
    "id": "major-a6",
@@ -253,6 +274,8 @@
     "alumni"
    ],
    "label": "Major Target",
+   "section": "Major Targets",
+   "tickets": 200,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -266,8 +289,7 @@
    "appIds": [
     "a6"
    ],
-   "earnedHow": "Manual",
-   "tickets": 200
+   "earnedHow": "Manual"
   },
   {
    "id": "grp-school-career",
@@ -277,6 +299,8 @@
     "arrows"
    ],
    "label": "Minor Targets",
+   "section": "Minor Targets",
+   "tickets": 30,
    "intro": "Sample wording - replace with your own. These four Minor Targets help you get ready for what comes after school. Each one you complete earns its own charm.",
    "steps": [],
    "purpose": "Sample wording - when I've earned these charms, I will have taken real steps toward school and work.",
@@ -332,6 +356,8 @@
     "arrows"
    ],
    "label": "Minor Targets",
+   "section": "Minor Targets",
+   "tickets": 30,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -371,6 +397,8 @@
     "arrows"
    ],
    "label": "Minor Targets",
+   "section": "Minor Targets",
+   "tickets": 30,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -426,6 +454,8 @@
     "arrows"
    ],
    "label": "Minor Targets",
+   "section": "Minor Targets",
+   "tickets": 30,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -489,6 +519,8 @@
     "arrows"
    ],
    "label": "Minor Target",
+   "section": "Minor Targets",
+   "tickets": 30,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -502,8 +534,7 @@
    "appIds": [
     "b17"
    ],
-   "earnedHow": "Manual",
-   "tickets": 30
+   "earnedHow": "Manual"
   },
   {
    "id": "arrow-bullseye",
@@ -512,7 +543,9 @@
    "audiences": [
     "arrows"
    ],
-   "label": "Bullseye",
+   "label": "Bullseye Award",
+   "section": "Bullseye",
+   "tickets": 200,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -526,8 +559,7 @@
    "appIds": [
     "bull"
    ],
-   "earnedHow": "Manual - custom text per person, one per person",
-   "tickets": 200
+   "earnedHow": "Manual - custom text per person, one per person"
   },
   {
    "id": "arrow-attendance",
@@ -536,7 +568,9 @@
    "audiences": [
     "arrows"
    ],
-   "label": "Attendance (automatic)",
+   "label": "Attendance",
+   "section": "Attendance",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -583,7 +617,9 @@
    "audiences": [
     "arrows"
    ],
-   "label": "Attendance (automatic)",
+   "label": "Attendance",
+   "section": "Attendance",
+   "tickets": 30,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -597,8 +633,7 @@
    "appIds": [
     "b16"
    ],
-   "earnedHow": "Automatic",
-   "tickets": 30
+   "earnedHow": "Automatic"
   },
   {
    "id": "vol-attendance",
@@ -608,7 +643,9 @@
     "volunteers",
     "alumni"
    ],
-   "label": "Attendance (automatic)",
+   "label": "Attendance",
+   "section": "Attendance",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -656,7 +693,9 @@
     "volunteers",
     "alumni"
    ],
-   "label": "Attendance (automatic)",
+   "label": "Attendance",
+   "section": "Attendance",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -670,8 +709,7 @@
    "appIds": [
     "v5row"
    ],
-   "earnedHow": "Automatic",
-   "tickets": null
+   "earnedHow": "Automatic"
   },
   {
    "id": "vol-6yr",
@@ -681,7 +719,9 @@
     "volunteers",
     "alumni"
    ],
-   "label": "Attendance (automatic)",
+   "label": "Attendance",
+   "section": "Attendance",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -695,8 +735,7 @@
    "appIds": [
     "v6yr"
    ],
-   "earnedHow": "Automatic",
-   "tickets": null
+   "earnedHow": "Automatic"
   },
   {
    "id": "vol-100hrs",
@@ -706,7 +745,9 @@
     "volunteers",
     "alumni"
    ],
-   "label": "Service (automatic)",
+   "label": "Service & Leadership",
+   "section": "Service & Leadership",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -720,18 +761,19 @@
    "appIds": [
     "vmn6"
    ],
-   "earnedHow": "Automatic - from volunteer hours",
-   "tickets": null
+   "earnedHow": "Automatic - from volunteer hours"
   },
   {
-   "id": "vol-livescan",
+   "id": "vol-donate",
    "type": "charm",
-   "title": "Live Scan/Megan's Law Status",
+   "title": "Donate or Raise $1000",
    "audiences": [
     "volunteers",
     "alumni"
    ],
-   "label": "Safety & Training",
+   "label": "Service & Leadership",
+   "section": "Service & Leadership",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -743,10 +785,115 @@
    "photo": "",
    "photo2": "",
    "appIds": [
-    "vmn1"
+    "vmn8"
    ],
-   "earnedHow": "Manual",
-   "tickets": null
+   "earnedHow": "Manual"
+  },
+  {
+   "id": "vol-teacher",
+   "type": "charm",
+   "title": "Teacher",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Service & Leadership",
+   "section": "Service & Leadership",
+   "tickets": null,
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn14"
+   ],
+   "earnedHow": "Manual"
+  },
+  {
+   "id": "vol-breakout",
+   "type": "charm",
+   "title": "Breakout Event Lead",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Service & Leadership",
+   "section": "Service & Leadership",
+   "tickets": null,
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn15"
+   ],
+   "earnedHow": "Manual"
+  },
+  {
+   "id": "vol-spanish",
+   "type": "charm",
+   "title": "Spanish Translator",
+   "audiences": [
+    "volunteers",
+    "alumni",
+    "parents"
+   ],
+   "label": "Service & Leadership",
+   "section": "Service & Leadership",
+   "tickets": null,
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn12"
+   ],
+   "earnedHow": "Manual"
+  },
+  {
+   "id": "vol-pressure",
+   "type": "charm",
+   "title": "Succeeded Under Pressure",
+   "audiences": [
+    "volunteers",
+    "alumni",
+    "parents"
+   ],
+   "label": "Service & Leadership",
+   "section": "Service & Leadership",
+   "tickets": null,
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn13"
+   ],
+   "earnedHow": "Manual"
   },
   {
    "id": "vol-comentor",
@@ -757,6 +904,8 @@
     "alumni"
    ],
    "label": "Mentoring",
+   "section": "Mentoring",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -770,8 +919,7 @@
    "appIds": [
     "vmn2"
    ],
-   "earnedHow": "Manual",
-   "tickets": null
+   "earnedHow": "Manual"
   },
   {
    "id": "vol-mentee",
@@ -782,6 +930,8 @@
     "alumni"
    ],
    "label": "Mentoring",
+   "section": "Mentoring",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -796,44 +946,19 @@
     "vmn3",
     "vmn4"
    ],
-   "earnedHow": "Manual (the Mentee Name field is recorded with this charm)",
-   "tickets": null
+   "earnedHow": "Manual (the Mentee Name field is recorded with this charm)"
   },
   {
-   "id": "vol-connected",
+   "id": "vol-livescan",
    "type": "charm",
-   "title": "Connected Online - Volunteer",
+   "title": "Live Scan/Megan's Law Status",
    "audiences": [
     "volunteers",
     "alumni"
-   ],
-   "label": "Connection",
-   "intro": "",
-   "steps": [],
-   "purpose": "",
-   "quote": {
-    "text": "",
-    "by": ""
-   },
-   "image": "",
-   "photo": "",
-   "photo2": "",
-   "appIds": [
-    "vmn5"
-   ],
-   "earnedHow": "Manual",
-   "tickets": null
-  },
-  {
-   "id": "vol-cpr",
-   "type": "charm",
-   "title": "CPR Certified",
-   "audiences": [
-    "volunteers",
-    "alumni",
-    "parents"
    ],
    "label": "Safety & Training",
+   "section": "Safety & Training",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -845,35 +970,9 @@
    "photo": "",
    "photo2": "",
    "appIds": [
-    "vmn7"
+    "vmn1"
    ],
-   "earnedHow": "Manual",
-   "tickets": null
-  },
-  {
-   "id": "vol-donate",
-   "type": "charm",
-   "title": "Donate or Raise $1000",
-   "audiences": [
-    "volunteers",
-    "alumni"
-   ],
-   "label": "Service",
-   "intro": "",
-   "steps": [],
-   "purpose": "",
-   "quote": {
-    "text": "",
-    "by": ""
-   },
-   "image": "",
-   "photo": "",
-   "photo2": "",
-   "appIds": [
-    "vmn8"
-   ],
-   "earnedHow": "Manual",
-   "tickets": null
+   "earnedHow": "Manual"
   },
   {
    "id": "vol-mandated",
@@ -884,6 +983,8 @@
     "alumni"
    ],
    "label": "Safety & Training",
+   "section": "Safety & Training",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -897,33 +998,7 @@
    "appIds": [
     "vmn9"
    ],
-   "earnedHow": "Manual",
-   "tickets": null
-  },
-  {
-   "id": "vol-refer",
-   "type": "charm",
-   "title": "Refer a Volunteer",
-   "audiences": [
-    "volunteers",
-    "alumni"
-   ],
-   "label": "Connection",
-   "intro": "",
-   "steps": [],
-   "purpose": "",
-   "quote": {
-    "text": "",
-    "by": ""
-   },
-   "image": "",
-   "photo": "",
-   "photo2": "",
-   "appIds": [
-    "vmn10"
-   ],
-   "earnedHow": "Manual",
-   "tickets": null
+   "earnedHow": "Manual"
   },
   {
    "id": "vol-sapt",
@@ -934,6 +1009,8 @@
     "alumni"
    ],
    "label": "Safety & Training",
+   "section": "Safety & Training",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -947,19 +1024,20 @@
    "appIds": [
     "vmn11"
    ],
-   "earnedHow": "Manual",
-   "tickets": null
+   "earnedHow": "Manual"
   },
   {
-   "id": "vol-spanish",
+   "id": "vol-cpr",
    "type": "charm",
-   "title": "Spanish Translator",
+   "title": "CPR Certified",
    "audiences": [
     "volunteers",
     "alumni",
     "parents"
    ],
-   "label": "Service",
+   "label": "Safety & Training",
+   "section": "Safety & Training",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -971,46 +1049,21 @@
    "photo": "",
    "photo2": "",
    "appIds": [
-    "vmn12"
+    "vmn7"
    ],
-   "earnedHow": "Manual",
-   "tickets": null
+   "earnedHow": "Manual"
   },
   {
-   "id": "vol-pressure",
+   "id": "vol-connected",
    "type": "charm",
-   "title": "Succeeded Under Pressure",
-   "audiences": [
-    "volunteers",
-    "alumni",
-    "parents"
-   ],
-   "label": "Service",
-   "intro": "",
-   "steps": [],
-   "purpose": "",
-   "quote": {
-    "text": "",
-    "by": ""
-   },
-   "image": "",
-   "photo": "",
-   "photo2": "",
-   "appIds": [
-    "vmn13"
-   ],
-   "earnedHow": "Manual",
-   "tickets": null
-  },
-  {
-   "id": "vol-teacher",
-   "type": "charm",
-   "title": "Teacher",
+   "title": "Connected Online - Volunteer",
    "audiences": [
     "volunteers",
     "alumni"
    ],
-   "label": "Service",
+   "label": "Connection",
+   "section": "Connection",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -1022,20 +1075,21 @@
    "photo": "",
    "photo2": "",
    "appIds": [
-    "vmn14"
+    "vmn5"
    ],
-   "earnedHow": "Manual",
-   "tickets": null
+   "earnedHow": "Manual"
   },
   {
-   "id": "vol-breakout",
+   "id": "vol-refer",
    "type": "charm",
-   "title": "Breakout Event Lead",
+   "title": "Refer a Volunteer",
    "audiences": [
     "volunteers",
     "alumni"
    ],
-   "label": "Service",
+   "label": "Connection",
+   "section": "Connection",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -1047,10 +1101,9 @@
    "photo": "",
    "photo2": "",
    "appIds": [
-    "vmn15"
+    "vmn10"
    ],
-   "earnedHow": "Manual",
-   "tickets": null
+   "earnedHow": "Manual"
   },
   {
    "id": "par-contact",
@@ -1060,6 +1113,8 @@
     "parents"
    ],
    "label": "Family",
+   "section": "Family",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -1071,8 +1126,7 @@
    "photo": "",
    "photo2": "",
    "appIds": [],
-   "earnedHow": "Manual (new charm - not in the app yet)",
-   "tickets": null
+   "earnedHow": "Manual (new charm - not in the app yet)"
   },
   {
    "id": "par-friend",
@@ -1082,6 +1136,8 @@
     "parents"
    ],
    "label": "Family",
+   "section": "Family",
+   "tickets": null,
    "intro": "",
    "steps": [],
    "purpose": "",
@@ -1093,8 +1149,7 @@
    "photo": "",
    "photo2": "",
    "appIds": [],
-   "earnedHow": "Manual (new charm - not in the app yet)",
-   "tickets": null
+   "earnedHow": "Manual (new charm - not in the app yet)"
   }
  ]
 }

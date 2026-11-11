@@ -71,20 +71,32 @@ body{font-family:"Palanquin","Helvetica Neue",Arial,sans-serif;color:var(--ink);
   background:#fff;border:1.5px solid var(--accent-ink);color:var(--accent-ink)}
 
 /* Cover: title only, slightly above center, faint hexagons in the booklet color */
-.page.cover{display:block;background:#fff}
+.page.cover{display:block;background:var(--accent);color:var(--cover-text)}
 .page.cover .hexes{position:absolute;inset:0;width:100%;height:100%}
 .page.cover .cover-box{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;padding:0 90px 150px}
-.page.cover h1{margin:0;font-size:72px;line-height:1.05;font-weight:700;color:var(--title);max-width:620px}
-.page.cover p{margin:26px 0 0;font-size:18px;line-height:1.5;max-width:520px;color:var(--ink)}
+  text-align:center;padding:0 90px 190px}
+.page.cover h1{margin:0;font-size:72px;line-height:1.05;font-weight:700;color:var(--cover-text);max-width:640px}
+.page.cover p{margin:26px 0 0;font-size:18px;line-height:1.5;max-width:520px;color:var(--cover-text)}
+.cover-logo{position:absolute;left:50%;bottom:78px;transform:translateX(-50%);width:300px;height:auto;display:block}
+
+/* Table of contents (page 2) */
+.page.toc{display:block;background:#fff}
+.toc-banner{height:190px;background:var(--accent);position:relative;overflow:hidden;display:flex;align-items:center;padding:0 54px}
+.toc-banner .hexes{position:absolute;inset:0;width:100%;height:100%}
+.toc-banner h1{position:relative;margin:0;font-size:54px;font-weight:700;color:var(--cover-text);line-height:1.05}
+.toc-body{columns:2;column-gap:46px;padding:34px 54px 70px}
+.toc-sec{break-inside:avoid;margin-bottom:24px}
+.toc-h{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);padding-bottom:5px;margin-bottom:4px;border-bottom:2px solid var(--accent)}
+.toc-link{display:flex;align-items:baseline;gap:6px;padding:5px 0;font-size:15px;line-height:1.25;color:var(--title);text-decoration:none}
+.toc-link .dots{flex:1;min-width:12px;border-bottom:2px dotted #b8bfd0;transform:translateY(-3px)}
+.toc-link .pn{font-weight:700;color:var(--accent-ink)}
+.toc-link:hover .tt,.toc-link:focus-visible .tt{text-decoration:underline}
 
 /* Phone layout: pages reflow into one readable column instead of shrinking a Letter sheet (screen only) */
 .page.mobile{width:100%;height:auto;display:block;overflow:visible;box-shadow:0 4px 18px rgba(0,44,102,.18)}
 .page.mobile .pg-main{display:block}
-.page.mobile .pg-photo{height:auto}
-.page.mobile .pg-photo img{height:150px}
-.page.mobile .pg-photo .ph-empty{position:static;height:100px}
-.page.mobile .pg-quote{position:static;width:100%;font-size:16px}
+.page.mobile .pg-quote-m{margin:18px 0 0}
+.page.mobile .pg-quote-m .pg-quote{position:static;width:100%;font-size:16px;border-radius:10px}
 .page.mobile .pg-banner{height:124px}
 .page.mobile .badge{width:92px;height:92px;border-radius:20px}
 .page.mobile .pg-title{padding:20px 18px 8px}
@@ -99,7 +111,13 @@ body{font-family:"Palanquin","Helvetica Neue",Arial,sans-serif;color:var(--ink);
 .page.mobile .pg-photo2{position:static;width:150px;height:150px;margin:20px auto 4px}
 .page.mobile .pg-foot{position:static;height:auto;padding:12px 0 0;justify-content:center}
 .page.cover.mobile{height:66vh;min-height:440px}
-.page.cover.mobile .cover-box{padding:0 26px 90px}
+.page.cover.mobile .cover-box{padding:0 26px 110px}
+.page.cover.mobile .cover-logo{width:200px;bottom:34px}
+.page.toc.mobile .toc-banner{height:120px;padding:0 20px}
+.page.toc.mobile .toc-banner h1{font-size:34px}
+.page.toc.mobile .toc-body{columns:1;padding:14px 18px 26px}
+.page.toc.mobile .toc-link{padding:11px 0;font-size:16.5px}
+.page.toc.mobile .pg-foot{position:static;height:auto;padding:0 18px 16px;justify-content:center}
 .page.cover.mobile h1{font-size:40px}
 .page.cover.mobile p{font-size:16px}
 
