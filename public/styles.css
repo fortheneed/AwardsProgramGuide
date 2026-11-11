@@ -135,3 +135,22 @@ body{font-family:"Palanquin","Helvetica Neue",Arial,sans-serif;color:var(--ink);
   .ph-empty,.b-empty{color:transparent!important}
   .noprint{display:none!important}
 }
+
+/* ---------- Edit mode (only present after someone unlocks editing) ---------- */
+[data-f]:empty::before{content:attr(data-ph);color:#8d95a8;font-style:italic;pointer-events:none}
+.page.cover [data-f]:empty::before{color:var(--cover-text);opacity:.6}
+.editing [data-f]{outline:1.5px dashed rgba(0,44,102,.35);outline-offset:2px;border-radius:3px;cursor:text;min-width:3ch}
+.editing [data-f]:hover{outline-color:#0091FF;background:rgba(255,255,255,.55)}
+.editing [data-f]:focus{outline:2px solid #0091FF;background:rgba(255,255,255,.85)}
+.editing .page.cover [data-f]:hover,.editing .page.cover [data-f]:focus{background:rgba(255,255,255,.18)}
+.editing .pg-purpose.strong{font-weight:700;color:var(--title)}
+.editing .page.cover .cover-box p[data-f]{min-width:12ch}
+.img-edit{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);display:flex;gap:6px;z-index:5;white-space:nowrap}
+.img-edit button{font:inherit;font-size:12px;font-weight:700;padding:5px 11px;border:0;border-radius:14px;background:#fff;color:#002C66;box-shadow:0 1px 6px rgba(0,0,0,.3);cursor:pointer}
+.img-edit .rm{background:#ffe3e3;color:#8a1c1c}
+.badge .img-edit,.mini .img-edit{flex-direction:column;align-items:center;gap:2px;bottom:4px}
+.mini{position:relative}
+.mini .img-edit button{font-size:9px;padding:2px 6px}
+.pg-photo2 .img-edit{bottom:14px}
+.edit-add{margin:6px 0 0 22px;font:inherit;font-size:13px;font-weight:700;color:var(--accent-ink);background:none;border:1.5px dashed var(--accent-ink);border-radius:8px;padding:4px 10px;cursor:pointer}
+.pg-quote .q-text{display:block}

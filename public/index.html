@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Awards Program Guide — Booklet Preview</title>
+<title>For the Need — Awards Program Guide</title>
+<meta name="description" content="Charms, targets and milestones for Arrows, Arrow Alumni, Volunteers and Parents/Guardians.">
 <link rel="stylesheet" href="styles.css">
 <style>
   html,body{height:100%;overflow:hidden}
@@ -14,8 +15,13 @@
   .bar select,.bar button{font:inherit;font-size:15px;padding:8px 10px;border-radius:8px;border:0;min-height:40px;max-width:100%}
   .bar select{min-width:0}
   .bar button{cursor:pointer;background:#fff;color:#002C66;font-weight:700;white-space:nowrap}
+  .bar button.go{background:#79C900;color:#201F1F}
+  .bar button:disabled{opacity:.45;cursor:default}
   .bar .sp{flex:1}
-  body.is-mobile #printBtn{display:none}
+  .edit-tools{display:none;gap:8px;align-items:center;flex-wrap:wrap}
+  .edit-status{font-size:13px;opacity:.95;max-width:46ch}
+  .edit-status.ok{color:#b9f26b}.edit-status.warn{color:#ffd966}.edit-status.err{color:#ffb3b3;font-weight:700}
+  body.is-mobile #printBtn,body.is-mobile #editBtn{display:none!important}
   .viewer{flex:1;position:relative;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
   .viewer.mobile{display:block;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding:10px}
   .stage{position:relative}
@@ -36,6 +42,17 @@
   .pager button:disabled{opacity:.25;cursor:default}
   .pager .pos{flex:1;text-align:center;font-weight:600;color:#002C66;font-size:15px;min-width:0}
   #printArea{display:none}
+  dialog{border:0;border-radius:14px;padding:22px 24px;max-width:min(92vw,380px);box-shadow:0 12px 40px rgba(0,0,0,.35);font-family:inherit}
+  dialog::backdrop{background:rgba(0,28,66,.55)}
+  dialog h2{margin:0 0 4px;font-size:20px;color:#002C66}
+  dialog p{margin:0 0 12px;font-size:14px;color:#4a5160}
+  dialog input{width:100%;font:inherit;font-size:16px;padding:10px 12px;border:2px solid #b8bfd0;border-radius:8px}
+  dialog input:focus{outline:none;border-color:#0091FF}
+  dialog .err{color:#b3261e;font-size:14px;min-height:20px;margin:8px 0 2px}
+  dialog .row{display:flex;gap:10px;justify-content:flex-end;margin-top:8px}
+  dialog button{font:inherit;font-weight:700;border:0;border-radius:8px;padding:10px 16px;cursor:pointer;background:#e7eaf1;color:#002C66}
+  dialog button.go{background:#002C66;color:#fff}
+  dialog button:disabled{opacity:.5}
   @media (max-width:700px){
     .bar strong{display:none}
     .bar label{flex:1 1 auto}
@@ -45,7 +62,7 @@
   }
   @media print{
     html,body{height:auto;overflow:visible;background:#fff}
-    .bar,.viewer,.pager{display:none!important}
+    .bar,.viewer,.pager,dialog{display:none!important}
     #printArea{display:block}
   }
 </style>
@@ -56,6 +73,13 @@
   <label>Type <select id="aud"></select></label>
   <button id="tocBtn">&#9776; Contents</button>
   <span class="sp"></span>
+  <div class="edit-tools" id="editTools">
+    <span id="editStatus" class="edit-status"></span>
+    <button id="saveBtn" class="go" disabled>Save</button>
+    <button id="pubBtn">Publish now</button>
+    <button id="exitBtn">Done editing</button>
+  </div>
+  <button id="editBtn">&#9998; Edit</button>
   <button id="printBtn">Print this booklet</button>
 </div>
 <div class="viewer noprint" id="viewer"><div class="stage" id="stage"></div></div>
@@ -65,38 +89,59 @@
   <button id="next" aria-label="Next page">Next &#8250;</button>
 </div>
 <div id="printArea"></div>
+
+<dialog id="pwDlg">
+  <form id="pwForm" autocomplete="off">
+    <h2>Unlock editing</h2>
+    <p>Enter the editing password.</p>
+    <input id="pwInput" type="password" aria-label="Editing password" autocomplete="current-password">
+    <div class="err" id="pwErr" role="alert"></div>
+    <div class="row"><button type="button" id="pwCancel">Cancel</button><button type="submit" id="pwGo" class="go">Unlock</button></div>
+  </form>
+</dialog>
+
 <script src="app.js"></script>
+<script src="edit.js"></script>
 <script>
 (async function(){
   const G = AwardsGuide, PW = G.PW, PH = G.PH;
-  const data = await G.load();
+  let data = await G.load();
   const audSel = document.getElementById('aud');
   const stage = document.getElementById('stage'), viewer = document.getElementById('viewer');
   const prevB = document.getElementById('prev'), nextB = document.getElementById('next'), pos = document.getElementById('pos');
-  data.booklets.forEach(b => audSel.append(new Option(b.title, b.id)));
+  const fillTypes = () => { audSel.replaceChildren(); data.booklets.forEach(b => audSel.append(new Option(b.title, b.id))); };
+  fillTypes();
 
   let booklet, pages, cur = 0, lastMode = null, lastW = 0;
   const isMobile = () => window.innerWidth < 700 || window.innerHeight < 560;
+
+  // Printing always uses the full Letter-size pages, one per sheet. Rebuilt right before printing so it is never stale.
+  function buildPrintArea(){
+    const pa = document.getElementById('printArea'); pa.replaceChildren();
+    pages.forEach((p, i) => pa.append(G.wrap(G.render(p, booklet, data, i + 1))));
+  }
 
   function chooseBooklet(id, page){
     const bk = G.booklet(data, id);
     booklet = bk.booklet; pages = bk.pages;
     audSel.value = booklet.id;
     cur = Math.min(Math.max(page || 0, 0), pages.length - 1);
-    // Printing always uses the full Letter-size pages, one per sheet.
-    const pa = document.getElementById('printArea'); pa.replaceChildren();
-    pages.forEach((p, i) => pa.append(G.wrap(G.render(p, booklet, data, i + 1))));
     show(null);
   }
 
   function show(dir){
-    const mobile = isMobile();
+    const bk = G.booklet(data, booklet.id); // titles may have been edited, so the contents page is rebuilt each time
+    booklet = bk.booklet; pages = bk.pages;
+    cur = Math.min(cur, pages.length - 1);
+    const editing = AwardsEdit.active;
+    const mobile = !editing && isMobile();
     lastMode = mobile; lastW = window.innerWidth;
-    document.body.classList.toggle('is-mobile', mobile);
+    document.body.classList.toggle('is-mobile', isMobile());
     viewer.classList.toggle('mobile', mobile);
     const el = document.createElement('div');
     el.className = 'spread' + (dir ? ' go-' + dir : '');
-    el.append(G.wrap(G.render(pages[cur], booklet, data, cur + 1, {mobile})));
+    const page = G.render(pages[cur], booklet, data, cur + 1, {mobile, edit: editing && pages[cur].type !== 'toc'});
+    el.append(G.wrap(page));
     if(mobile){
       stage.style.width = ''; stage.style.height = '';
     } else {
@@ -105,22 +150,20 @@
       stage.style.width = (PW * sc) + 'px'; stage.style.height = (PH * sc) + 'px';
     }
     stage.replaceChildren(el);
+    if(editing && pages[cur].type !== 'toc') AwardsEdit.decorate(el, pages[cur]);
     viewer.scrollTop = 0;
     pos.textContent = cur === 0 ? 'Cover' : cur === 1 ? 'Contents' : 'Page ' + (cur + 1) + ' of ' + pages.length;
     prevB.disabled = cur === 0; nextB.disabled = cur === pages.length - 1;
     try{ history.replaceState(null, '', '#' + booklet.id + '/' + (cur + 1)); }catch(e){}
   }
 
-  function goTo(n, dir){
-    if(n < 0 || n >= pages.length) return;
-    cur = n; show(dir || (n > cur ? 'next' : 'prev'));
-  }
   const go = (d) => { const n = cur + d; if(n >= 0 && n < pages.length){ cur = n; show(d > 0 ? 'next' : 'prev'); } };
 
   prevB.onclick = () => go(-1); nextB.onclick = () => go(1);
   audSel.onchange = () => chooseBooklet(audSel.value, 0);
   document.getElementById('tocBtn').onclick = () => { cur = 1; show('prev'); };
-  document.getElementById('printBtn').onclick = () => window.print();
+  document.getElementById('printBtn').onclick = () => { buildPrintArea(); window.print(); };
+  window.addEventListener('beforeprint', buildPrintArea);
   // Contents links turn to the page they name.
   stage.addEventListener('click', e => {
     const a = e.target.closest && e.target.closest('a[data-page]');
@@ -129,20 +172,26 @@
     cur = +a.dataset.page; show('next');
   });
   document.addEventListener('keydown', e => {
-    if(e.target && /SELECT|INPUT/.test(e.target.tagName)) return;
+    if(e.target && (/SELECT|INPUT|TEXTAREA/.test(e.target.tagName) || e.target.isContentEditable)) return;
     if(e.key === 'ArrowRight') go(1); else if(e.key === 'ArrowLeft') go(-1);
   });
   let tx = null, ty = null;
   viewer.addEventListener('touchstart', e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive: true});
   viewer.addEventListener('touchend', e => {
-    if(tx === null) return;
+    if(tx === null || AwardsEdit.active) return;
     const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty; tx = null;
     if(Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(dx < 0 ? 1 : -1);
   });
   // Re-fit on rotate/resize; ignore height-only changes on phones (the address bar hiding fires those).
   let rt; window.addEventListener('resize', () => {
     clearTimeout(rt);
-    rt = setTimeout(() => { if(isMobile() === lastMode && isMobile() && window.innerWidth === lastW) return; show(null); }, 120);
+    rt = setTimeout(() => { if(!AwardsEdit.active && isMobile() === lastMode && isMobile() && window.innerWidth === lastW) return; show(null); }, 120);
+  });
+
+  AwardsEdit.init({
+    getData: () => data,
+    setData: (d) => { data = d; fillTypes(); audSel.value = booklet.id; },
+    refresh: () => show(null)
   });
 
   const m = (location.hash || '').match(/^#([a-z]+)\/(\d+)$/);
