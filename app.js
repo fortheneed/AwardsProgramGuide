@@ -1,7 +1,7 @@
 /* Awards Program Guide — page renderer (no framework). Text is always inserted as text, never as HTML. */
 (function(){
   const PW = 816, PH = 1056; // 8.5in x 11in @ 96dpi
-  const LOGOS = {black: 'assets/logo-black.png', white: 'assets/logo-white.png'};
+  const LOGO = 'assets/logo.png'; // full-color logo with white wordmark; always shown on a brand-navy plate
 
   function h(tag, attrs, ...kids){
     const el = document.createElement(tag);
@@ -62,7 +62,7 @@
     page.append(h('div', {class: 'cover-box'},
       h('h1', null, p.title),
       p.intro ? h('p', null, p.intro) : null));
-    page.append(h('img', {class: 'cover-logo', src: LOGOS[booklet.logo === 'white' ? 'white' : 'black'], alt: 'For the Need Foundation'}));
+    page.append(h('div', {class: 'cover-logo'}, h('img', {src: LOGO, alt: 'For the Need Foundation'})));
     return page;
   }
 

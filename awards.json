@@ -13,8 +13,7 @@
    "subtitle": "Arrowchievements Guide",
    "color": "#79C900",
    "ink": "#4E8A00",
-   "coverText": "#201F1F",
-   "logo": "black"
+   "coverText": "#201F1F"
   },
   {
    "id": "alumni",
@@ -22,8 +21,7 @@
    "subtitle": "Arrow Alumni Awards Program Guide",
    "color": "#FFCC00",
    "ink": "#8F6700",
-   "coverText": "#201F1F",
-   "logo": "black"
+   "coverText": "#201F1F"
   },
   {
    "id": "volunteers",
@@ -31,8 +29,7 @@
    "subtitle": "Volunteer Awards Program Guide",
    "color": "#201F1F",
    "ink": "#201F1F",
-   "coverText": "#FFFFFF",
-   "logo": "white"
+   "coverText": "#FFFFFF"
   },
   {
    "id": "parents",
@@ -40,8 +37,7 @@
    "subtitle": "Parent/Guardian Awards Program Guide",
    "color": "#0091FF",
    "ink": "#0074CF",
-   "coverText": "#201F1F",
-   "logo": "black"
+   "coverText": "#201F1F"
   }
  ],
  "pages": [
