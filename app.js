@@ -15,6 +15,27 @@
   const img = (src, alt) => h('img', {src: 'images/' + src.replace(/^\/?images\//, ''), alt: alt || ''});
   const blank = (t) => h('span', {style: 'color:#9aa0b4;font-style:italic'}, t);
 
+  // Decorative hexagons of mixed sizes behind the charm badge. [centerX, centerY, radius, opacity, outlineOnly]
+  const HEXES = [[40,48,36,.16,0],[96,150,22,.12,0],[22,190,16,.3,1],[150,36,14,.22,0],[205,196,32,.12,0],[112,92,9,.28,0],
+    [250,22,12,.3,1],[395,40,26,.15,0],[470,112,42,.11,0],[535,28,16,.24,0],[524,196,24,.28,1],[362,172,14,.22,0],
+    [312,216,20,.12,0],[442,216,11,.24,0],[330,104,8,.2,0],[80,215,10,.2,0],[548,100,12,.25,1]];
+  function hexBanner(){
+    const NS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('class', 'hexes'); svg.setAttribute('viewBox', '0 0 566 230');
+    svg.setAttribute('preserveAspectRatio', 'xMidYMid slice'); svg.setAttribute('aria-hidden', 'true');
+    HEXES.forEach(([cx, cy, r, op, outline]) => {
+      const pts = [0,1,2,3,4,5].map(k => { const a = Math.PI / 180 * (60 * k + 30); return (cx + r * Math.cos(a)).toFixed(1) + ',' + (cy + r * Math.sin(a)).toFixed(1); }).join(' ');
+      const poly = document.createElementNS(NS, 'polygon');
+      poly.setAttribute('points', pts);
+      poly.setAttribute('stroke-linejoin', 'round');
+      if(outline){ poly.setAttribute('fill', 'none'); poly.setAttribute('stroke', '#fff'); poly.setAttribute('stroke-width', '3'); poly.setAttribute('stroke-opacity', op); }
+      else { poly.setAttribute('fill', '#fff'); poly.setAttribute('fill-opacity', op); }
+      svg.append(poly);
+    });
+    return svg;
+  }
+
   function photoCol(p){
     const col = h('div', {class: 'pg-photo'});
     col.append(p.photo ? img(p.photo, '') : h('div', {class: 'ph-empty'}, 'Photo'));
@@ -34,7 +55,7 @@
     page.append(photoCol(p));
 
     const main = h('div', {class: 'pg-main'});
-    main.append(h('div', {class: 'pg-banner'},
+    main.append(h('div', {class: 'pg-banner'}, hexBanner(),
       h('div', {class: 'badge'}, p.image ? img(p.image, p.title) : h('div', {class: 'b-empty'}, 'Charm'))));
 
     main.append(h('div', {class: 'pg-title' + (p.title.length > 22 ? ' long' : '')},
@@ -43,7 +64,7 @@
       p.type === 'cover' ? null : whoChips(p, data)));
 
     const body = h('div', {class: 'pg-body'});
-    body.append(h('p', {class: 'pg-intro'}, p.intro || blank('Intro paragraph goes here.')));
+    body.append(h('p', {class: 'pg-intro' + (p.intro ? '' : ' nodrop')}, p.intro || blank(p.type === 'cover' ? 'Welcome text goes here.' : 'Intro paragraph goes here.')));
 
     if(p.type === 'charm'){
       body.append(h('div', {class: 'pg-h'}, 'Steps'));
@@ -60,14 +81,12 @@
           h('div', {class: 'bl'}, it.blurb || blank('One-line description.')),
           (it.tickets && p.audiences.some(a => a === 'arrows' || a === 'alumni')) ? h('div', {class: 'tx'}, it.tickets + ' tickets') : null)))));
       if(p.purpose){ body.append(h('div', {class: 'pg-h'}, 'Purpose')); body.append(h('p', {class: 'pg-purpose'}, h('strong', null, p.purpose))); }
-    } else { /* cover */
-      body.append(h('p', {class: 'pg-purpose'}, blank('Welcome text goes here.')));
-    }
+    } /* cover: just the welcome text above */
 
     if(p.photo2) body.append(h('div', {class: 'pg-photo2'}, img(p.photo2, '')));
     else if(p.type === 'charm') body.append(h('div', {class: 'pg-photo2 empty'}, 'Photo 2'));
 
-    body.append(h('div', {class: 'pg-foot'}, booklet.title, h('b', null, '|'), String(pageNo)));
+    if(p.type !== 'cover') body.append(h('div', {class: 'pg-foot'}, booklet.title, h('b', null, '|'), String(pageNo)));
     main.append(body);
     page.append(main);
     return page;

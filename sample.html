@@ -3,45 +3,142 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Awards Program Guide — Sample Pages</title>
+<title>Awards Program Guide — Booklet Preview</title>
 <link rel="stylesheet" href="styles.css">
 <style>
-  .bar{position:sticky;top:0;z-index:5;background:#002C66;color:#fff;padding:10px 16px;font-size:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
-  .bar button{font:inherit;padding:6px 12px;border-radius:6px;border:0;cursor:pointer;background:#fff;color:#071C42;font-weight:700}
-  .bar select{font:inherit;padding:6px;border-radius:6px}
+  html,body{height:100%;overflow:hidden}
+  body{display:flex;flex-direction:column;background:#dfe3ea}
+  .bar{background:#002C66;color:#fff;padding:10px 16px;font-size:14px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;flex:0 0 auto}
+  .bar label{display:flex;align-items:center;gap:6px}
+  .bar select,.bar button{font:inherit;padding:6px 10px;border-radius:6px;border:0}
+  .bar button{cursor:pointer;background:#fff;color:#002C66;font-weight:700}
   .bar .sp{flex:1}
+  .bar .pos{opacity:.85;min-width:120px;text-align:center}
+  .viewer{flex:1;position:relative;display:flex;align-items:center;justify-content:center;min-height:0;overflow:hidden;touch-action:pan-y}
+  .stage{position:relative}
+  .spread{display:flex;transform-origin:top left;position:absolute;left:0;top:0;box-shadow:0 10px 40px rgba(0,44,102,.28)}
+  .spread .slot{width:816px;height:1056px;position:relative;overflow:hidden;background:#fff}
+  .spread .slot .sheet-wrap{margin:0;display:block;height:1056px!important;width:816px!important;padding:0!important}
+  .spread .slot .page{box-shadow:none}
+  .spread .slot.blank{background:#f1f2f6}
+  /* soft gutter shading where the two pages meet */
+  .spread.two .slot:first-child::after{content:"";position:absolute;top:0;bottom:0;right:0;width:46px;background:linear-gradient(90deg,transparent,rgba(0,0,0,.14));pointer-events:none}
+  .spread.two .slot:last-child::before{content:"";position:absolute;top:0;bottom:0;left:0;width:46px;background:linear-gradient(270deg,transparent,rgba(0,0,0,.14));pointer-events:none;z-index:3}
+  .spread.go-next{animation:inNext .32s ease-out}
+  .spread.go-prev{animation:inPrev .32s ease-out}
+  @keyframes inNext{from{opacity:.0;translate:30px 0}to{opacity:1;translate:0 0}}
+  @keyframes inPrev{from{opacity:.0;translate:-30px 0}to{opacity:1;translate:0 0}}
+  .nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:70px;border:0;border-radius:10px;background:rgba(0,44,102,.85);color:#fff;font-size:30px;cursor:pointer;z-index:4}
+  .nav:disabled{opacity:.25;cursor:default}
+  .nav.prev{left:8px}.nav.next{right:8px}
+  .hint{flex:0 0 auto;text-align:center;font-size:12px;color:#53607a;padding:5px 8px 7px}
+  #printArea{display:none}
+  @media print{
+    html,body{height:auto;overflow:visible;background:#fff}
+    .bar,.viewer,.hint{display:none!important}
+    #printArea{display:block}
+  }
 </style>
 </head>
 <body>
 <div class="bar noprint">
-  <strong>Sample pages</strong> — design preview only
+  <strong>Awards Program Guide</strong>
+  <label>Type: <select id="aud"></select></label>
+  <label>Go to: <select id="jump"></select></label>
+  <span class="pos" id="pos"></span>
   <span class="sp"></span>
-  <label>Color: <select id="aud"></select></label>
-  <button onclick="window.print()">Print these pages</button>
+  <button id="printBtn">Print this booklet</button>
 </div>
-<div id="out"></div>
+<div class="viewer noprint" id="viewer">
+  <button class="nav prev" id="prev" aria-label="Previous page">&#8249;</button>
+  <div class="stage" id="stage"></div>
+  <button class="nav next" id="next" aria-label="Next page">&#8250;</button>
+</div>
+<div class="hint noprint">Use the arrows, your keyboard's &#8592; &#8594; keys, or swipe to turn pages</div>
+<div id="printArea"></div>
 <script src="app.js"></script>
 <script>
 (async function(){
-  const data = await AwardsGuide.load();
-  const ids = ['major-a1','grp-school-career'];
-  const sel = document.getElementById('aud');
-  data.booklets.forEach(b => sel.append(new Option(b.title, b.id)));
-  const out = document.getElementById('out');
-  let wraps = [];
-  function draw(){
-    const booklet = data.booklets.find(b => b.id === sel.value);
-    out.replaceChildren();
-    wraps = ids.map((id,i) => {
-      const p = data.pages.find(x => x.id === id);
-      const w = AwardsGuide.wrap(AwardsGuide.render(p, booklet, data, i + 1));
-      out.append(w); return w;
-    });
-    AwardsGuide.fit(wraps);
+  const G = AwardsGuide, PW = G.PW, PH = G.PH;
+  const data = await G.load();
+  const audSel = document.getElementById('aud'), jump = document.getElementById('jump');
+  const stage = document.getElementById('stage'), viewer = document.getElementById('viewer');
+  const prevB = document.getElementById('prev'), nextB = document.getElementById('next'), pos = document.getElementById('pos');
+  data.booklets.forEach(b => audSel.append(new Option(b.title, b.id)));
+
+  let booklet, pages, mode, cur = 0; // cur = index of the page being looked at
+
+  function spreadsFor(){
+    if(mode === 'single') return pages.map((p, i) => [i]);
+    const out = [[0]]; // the cover stands alone, like a real booklet
+    for(let i = 1; i < pages.length; i += 2) out.push(i + 1 < pages.length ? [i, i + 1] : [i]);
+    return out;
   }
-  sel.addEventListener('change', draw);
-  window.addEventListener('resize', () => AwardsGuide.fit(wraps));
-  draw();
+  const spreadOf = (spreads, i) => Math.max(0, spreads.findIndex(s => s.includes(i)));
+
+  function chooseBooklet(id, page){
+    booklet = data.booklets.find(b => b.id === id) || data.booklets[0];
+    audSel.value = booklet.id;
+    pages = data.pages.filter(p => p.audiences.includes(booklet.id));
+    cur = Math.min(Math.max(page || 0, 0), pages.length - 1);
+    jump.replaceChildren();
+    pages.forEach((p, i) => jump.append(new Option(i === 0 ? 'Cover' : (i + 1) + '. ' + p.title, i)));
+    const pa = document.getElementById('printArea'); pa.replaceChildren();
+    pages.forEach((p, i) => pa.append(G.wrap(G.render(p, booklet, data, i + 1))));
+    show(null);
+  }
+
+  function show(dir){
+    mode = window.innerWidth >= 1000 ? 'spread' : 'single';
+    const spreads = spreadsFor();
+    const si = spreadOf(spreads, cur);
+    const s = spreads[si];
+    const el = document.createElement('div');
+    el.className = 'spread' + (s.length === 2 ? ' two' : '') + (dir ? ' go-' + dir : '');
+    s.forEach(i => {
+      const slot = document.createElement('div');
+      slot.className = 'slot';
+      slot.append(G.wrap(G.render(pages[i], booklet, data, i + 1)));
+      el.append(slot);
+    });
+    // fit to the window
+    const w = PW * s.length;
+    const availW = viewer.clientWidth - (viewer.clientWidth > 700 ? 120 : 20);
+    const availH = viewer.clientHeight - 16;
+    const sc = Math.min(1, availW / w, availH / PH);
+    el.style.transform = 'scale(' + sc + ')';
+    stage.style.width = (w * sc) + 'px'; stage.style.height = (PH * sc) + 'px';
+    stage.replaceChildren(el);
+    jump.value = String(cur);
+    const shown = s.map(x => x + 1);
+    pos.textContent = shown.length > 1 ? 'Pages ' + shown[0] + '–' + shown[1] + ' of ' + pages.length : 'Page ' + shown[0] + ' of ' + pages.length;
+    prevB.disabled = si === 0; nextB.disabled = si === spreads.length - 1;
+    try{ history.replaceState(null, '', '#' + booklet.id + '/' + (cur + 1)); }catch(e){}
+    show._spreads = spreads; show._si = si;
+  }
+
+  function go(delta){
+    const spreads = show._spreads, ni = show._si + delta;
+    if(ni < 0 || ni >= spreads.length) return;
+    cur = spreads[ni][0];
+    show(delta > 0 ? 'next' : 'prev');
+  }
+
+  prevB.onclick = () => go(-1); nextB.onclick = () => go(1);
+  audSel.onchange = () => chooseBooklet(audSel.value, 0);
+  jump.onchange = () => { cur = +jump.value; show(null); };
+  document.getElementById('printBtn').onclick = () => window.print();
+  document.addEventListener('keydown', e => {
+    if(e.target && /SELECT|INPUT/.test(e.target.tagName)) return;
+    if(e.key === 'ArrowRight') go(1); else if(e.key === 'ArrowLeft') go(-1);
+  });
+  let tx = null;
+  viewer.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, {passive: true});
+  viewer.addEventListener('touchend', e => { if(tx === null) return; const dx = e.changedTouches[0].clientX - tx; tx = null; if(Math.abs(dx) > 50) go(dx < 0 ? 1 : -1); });
+  let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => show(null), 120); });
+
+  const m = (location.hash || '').match(/^#([a-z]+)\/(\d+)$/);
+  chooseBooklet(m ? m[1] : data.booklets[0].id, m ? (+m[2] - 1) : 0);
 })();
 </script>
 </body>
