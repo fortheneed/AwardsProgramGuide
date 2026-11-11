@@ -1,0 +1,36 @@
+name: Publish guide edits
+
+# Edits made on the site wait on the "edits" branch. Once a day this merges them into the live
+# branch, which makes Netlify deploy ONCE. If nobody edited anything, nothing is merged and Netlify
+# does not deploy at all.
+#
+# 13:00 UTC = 6:00 am Pacific Daylight Time (5:00 am during Pacific Standard Time in winter).
+# GitHub schedules run in UTC and do not follow daylight saving.
+on:
+  schedule:
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Merge edits into the live branch
+        run: |
+          git config user.name "Guide publisher"
+          git config user.email "actions@users.noreply.github.com"
+          if ! git ls-remote --exit-code --heads origin edits > /dev/null; then
+            echo "No edits branch yet. Nothing to publish."; exit 0
+          fi
+          git fetch origin edits
+          if [ -z "$(git rev-list HEAD..origin/edits)" ]; then
+            echo "No new edits. Nothing to publish."; exit 0
+          fi
+          git merge --no-edit -m "Publish guide edits" origin/edits
+          git push origin HEAD

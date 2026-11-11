@@ -1,4 +1,6 @@
-/* Awards Program Guide — page renderer (no framework). Text is always inserted as text, never as HTML. */
+/* Awards Program Guide — page renderer (no framework). Text is always inserted as text, never as HTML.
+   When opts.edit is true the same pages are rendered with data-f (editable text) and data-slot (image) markers
+   that edit.js turns into editing controls. */
 (function(){
   const PW = 816, PH = 1056; // 8.5in x 11in @ 96dpi
   const LOGO = 'assets/logo.png'; // full-color logo with white wordmark; always shown on a brand-navy plate
@@ -13,8 +15,12 @@
     kids.flat().forEach(c => { if(c == null || c === false) return; el.append(c.nodeType ? c : document.createTextNode(String(c))); });
     return el;
   }
-  const img = (src, alt) => h('img', {src: 'images/' + src.replace(/^\/?images\//, ''), alt: alt || ''});
+  // Where an image file name points. edit.js replaces this while editing (saved-but-unpublished images live elsewhere).
+  const G = { src: (name) => 'images/' + String(name).replace(/^\/?images\//, '') };
+  const img = (name, alt) => h('img', {src: G.src(name), alt: alt || ''});
   const blank = (t) => h('span', {style: 'color:#9aa0b4;font-style:italic'}, t);
+  // An editable text field (edit mode only): plain text, with a hint shown while empty.
+  const fld = (tag, cls, path, value, hint) => h(tag, {class: cls, 'data-f': path, 'data-ph': hint}, value || '');
 
   // Decorative hexagons of mixed sizes. Each is [centerX, centerY, radius, opacity, outlineOnly].
   const BANNER_HEXES = [[40,48,36,.16,0],[96,150,22,.12,0],[22,190,16,.3,1],[150,36,14,.22,0],[205,196,32,.12,0],[112,92,9,.28,0],
@@ -45,23 +51,28 @@
   const accentStyle = (b) => '--accent:' + b.color + ';--accent-ink:' + (b.ink || b.color) + ';--cover-text:' + (b.coverText || '#201F1F');
   const mob = (opts) => (opts && opts.mobile) ? ' mobile' : '';
 
-  function photoCol(p){
-    const col = h('div', {class: 'pg-photo'});
+  function photoCol(p, E){
+    const col = h('div', {class: 'pg-photo', 'data-slot': E ? 'photo' : null});
     col.append(p.photo ? img(p.photo, '') : h('div', {class: 'ph-empty'}, 'Photo'));
-    if(p.quote && p.quote.text) col.append(quoteBox(p));
+    if((p.quote && p.quote.text) || E) col.append(quoteBox(p, E));
     return col;
   }
-  function quoteBox(p){
-    return h('div', {class: 'pg-quote'}, '“' + p.quote.text + '”', p.quote.by ? h('span', {class: 'by'}, '—' + p.quote.by) : null);
+  function quoteBox(p, E){
+    const q = p.quote || {text: '', by: ''};
+    if(E) return h('div', {class: 'pg-quote'},
+      fld('span', 'q-text', 'quote.text', q.text, 'Add a quote (optional)'),
+      fld('span', 'by', 'quote.by', q.by, 'Who said it'));
+    return h('div', {class: 'pg-quote'}, '“' + q.text + '”', q.by ? h('span', {class: 'by'}, '—' + q.by) : null);
   }
 
   // Cover: booklet-color background, title a little above center, our logo at the bottom.
   function renderCover(p, booklet, opts){
+    const E = !!opts.edit;
     const page = h('div', {class: 'page cover' + mob(opts), style: accentStyle(booklet)});
     page.append(hexSvg(COVER_HEXES, PW, PH, '#fff', opts.mobile ? 'xMidYMid slice' : 'xMidYMid meet'));
     page.append(h('div', {class: 'cover-box'},
-      h('h1', null, p.title),
-      p.intro ? h('p', null, p.intro) : null));
+      E ? fld('h1', '', 'title', p.title, 'Cover title') : h('h1', null, p.title),
+      E ? fld('p', '', 'intro', p.intro, 'Welcome text (optional)') : (p.intro ? h('p', null, p.intro) : null)));
     page.append(h('div', {class: 'cover-logo'}, h('img', {src: LOGO, alt: 'For the Need Foundation'})));
     return page;
   }
@@ -89,46 +100,56 @@
   const labelText = (p) => [p.label, p.tickets ? p.tickets + ' Tickets' : ''].filter(Boolean).join(' – ');
 
   // opts.mobile = reflowed single-column layout for phones (never used for printing).
+  // opts.edit   = editable version (desktop/tablet only).
   function render(p, booklet, data, pageNo, opts){
     opts = opts || {};
+    const E = !!opts.edit;
     if(p.type === 'cover') return renderCover(p, booklet, opts);
     if(p.type === 'toc') return renderToc(p, booklet, opts);
     const page = h('div', {class: 'page' + mob(opts), style: accentStyle(booklet)});
-    if(!opts.mobile) page.append(photoCol(p)); // phones skip the big side photo so the charm shows right away
+    if(!opts.mobile) page.append(photoCol(p, E)); // phones skip the big side photo so the charm shows right away
 
     const main = h('div', {class: 'pg-main'});
     main.append(h('div', {class: 'pg-banner'}, hexSvg(BANNER_HEXES, 566, 230, '#fff'),
-      h('div', {class: 'badge'}, p.image ? img(p.image, p.title) : h('div', {class: 'b-empty'}, 'Charm'))));
+      h('div', {class: 'badge', 'data-slot': E ? 'image' : null}, p.image ? img(p.image, p.title) : h('div', {class: 'b-empty'}, 'Charm'))));
 
     main.append(h('div', {class: 'pg-title' + (p.title.length > 22 ? ' long' : '')},
       labelText(p) ? h('div', {class: 'pg-label'}, labelText(p)) : null,
-      h('h1', null, p.title)));
+      E ? fld('h1', '', 'title', p.title, 'Page title') : h('h1', null, p.title)));
 
     const body = h('div', {class: 'pg-body'});
-    body.append(h('p', {class: 'pg-intro' + (p.intro ? '' : ' nodrop')}, p.intro || blank('Intro paragraph goes here.')));
+    body.append(E ? fld('p', 'pg-intro nodrop', 'intro', p.intro, 'Write the intro paragraph here')
+                  : h('p', {class: 'pg-intro' + (p.intro ? '' : ' nodrop')}, p.intro || blank('Intro paragraph goes here.')));
 
     if(p.type === 'charm'){
       body.append(h('div', {class: 'pg-h'}, 'Steps'));
-      const steps = (p.steps || []).filter(Boolean);
-      body.append(h('ol', {class: 'pg-steps'}, steps.length ? steps.map(s => h('li', null, s)) : [h('li', null, blank('Steps go here.'))]));
+      if(E){
+        const steps = (p.steps && p.steps.length) ? p.steps : [''];
+        body.append(h('ol', {class: 'pg-steps', 'data-steps': '1'}, steps.map((s, i) => fld('li', '', 'steps.' + i, s, 'Step ' + (i + 1)))));
+      } else {
+        const steps = (p.steps || []).filter(Boolean);
+        body.append(h('ol', {class: 'pg-steps'}, steps.length ? steps.map(s => h('li', null, s)) : [h('li', null, blank('Steps go here.'))]));
+      }
       body.append(h('div', {class: 'pg-h'}, 'Purpose'));
-      body.append(h('p', {class: 'pg-purpose'}, p.purpose ? h('strong', null, p.purpose) : blank('Purpose goes here.')));
+      body.append(E ? fld('p', 'pg-purpose strong', 'purpose', p.purpose, "When I've earned this charm, I will have…")
+                    : h('p', {class: 'pg-purpose'}, p.purpose ? h('strong', null, p.purpose) : blank('Purpose goes here.')));
     } else if(p.type === 'group'){
       body.append(h('div', {class: 'pg-h'}, 'The charms'));
-      body.append(h('div', {class: 'cards'}, p.items.map(it => h('div', {class: 'card'},
-        h('div', {class: 'mini'}, it.image ? img(it.image, it.name) : 'Charm'),
+      body.append(h('div', {class: 'cards'}, p.items.map((it, i) => h('div', {class: 'card'},
+        h('div', {class: 'mini', 'data-slot': E ? 'items.' + i + '.image' : null}, it.image ? img(it.image, it.name) : 'Charm'),
         h('div', null,
           h('div', {class: 'nm'}, it.name),
-          h('div', {class: 'bl'}, it.blurb || blank('One-line description.')),
+          E ? fld('div', 'bl', 'items.' + i + '.blurb', it.blurb, 'One-line description') : h('div', {class: 'bl'}, it.blurb || blank('One-line description.')),
           // per-charm tickets only when the page doesn't already state one amount (e.g. Bronze/Silver/Gold)
           (it.tickets && !p.tickets && p.audiences.some(a => a === 'arrows' || a === 'alumni')) ? h('div', {class: 'tx'}, it.tickets + ' tickets') : null)))));
-      if(p.purpose){ body.append(h('div', {class: 'pg-h'}, 'Purpose')); body.append(h('p', {class: 'pg-purpose'}, h('strong', null, p.purpose))); }
+      if(E){ body.append(h('div', {class: 'pg-h'}, 'Purpose')); body.append(fld('p', 'pg-purpose strong', 'purpose', p.purpose, "When I've earned these charms, I will have…")); }
+      else if(p.purpose){ body.append(h('div', {class: 'pg-h'}, 'Purpose')); body.append(h('p', {class: 'pg-purpose'}, h('strong', null, p.purpose))); }
     }
 
     // On phones the quote (normally over photo 1) moves into the page body.
-    if(opts.mobile && p.quote && p.quote.text) body.append(h('div', {class: 'pg-quote-m'}, quoteBox(p)));
+    if(opts.mobile && p.quote && p.quote.text) body.append(h('div', {class: 'pg-quote-m'}, quoteBox(p, false)));
 
-    if(p.photo2) body.append(h('div', {class: 'pg-photo2'}, img(p.photo2, '')));
+    if(p.photo2 || E) body.append(h('div', {class: 'pg-photo2' + (p.photo2 ? '' : ' empty'), 'data-slot': E ? 'photo2' : null}, p.photo2 ? img(p.photo2, '') : 'Photo 2'));
     else if(p.type === 'charm') body.append(h('div', {class: 'pg-photo2 empty'}, 'Photo 2'));
 
     body.append(h('div', {class: 'pg-foot'}, booklet.title, h('b', null, '|'), String(pageNo)));
@@ -155,8 +176,9 @@
     return {booklet: b, pages: [...cover, toc, ...rest]};
   }
 
-  window.AwardsGuide = {
+  Object.assign(G, {
     load: () => fetch('awards.json', {cache: 'no-cache'}).then(r => r.json()),
     render, wrap, booklet, PW, PH
-  };
+  });
+  window.AwardsGuide = G;
 })();
