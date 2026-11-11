@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Awards Program Guide — Sample Pages</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .bar{position:sticky;top:0;z-index:5;background:#071C42;color:#fff;padding:10px 16px;font-size:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+  .bar button{font:inherit;padding:6px 12px;border-radius:6px;border:0;cursor:pointer;background:#fff;color:#071C42;font-weight:700}
+  .bar select{font:inherit;padding:6px;border-radius:6px}
+  .bar .sp{flex:1}
+</style>
+</head>
+<body>
+<div class="bar noprint">
+  <strong>Sample pages</strong> — design preview only
+  <span class="sp"></span>
+  <label>Color: <select id="aud"></select></label>
+  <button onclick="window.print()">Print these pages</button>
+</div>
+<div id="out"></div>
+<script src="app.js"></script>
+<script>
+(async function(){
+  const data = await AwardsGuide.load();
+  const ids = ['major-a1','grp-school-career'];
+  const sel = document.getElementById('aud');
+  data.booklets.forEach(b => sel.append(new Option(b.title, b.id)));
+  const out = document.getElementById('out');
+  let wraps = [];
+  function draw(){
+    const booklet = data.booklets.find(b => b.id === sel.value);
+    out.replaceChildren();
+    wraps = ids.map((id,i) => {
+      const p = data.pages.find(x => x.id === id);
+      const w = AwardsGuide.wrap(AwardsGuide.render(p, booklet, data, i + 1));
+      out.append(w); return w;
+    });
+    AwardsGuide.fit(wraps);
+  }
+  sel.addEventListener('change', draw);
+  window.addEventListener('resize', () => AwardsGuide.fit(wraps));
+  draw();
+})();
+</script>
+</body>
+</html>

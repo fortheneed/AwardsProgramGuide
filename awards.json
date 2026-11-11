@@ -1,0 +1,1096 @@
+{
+ "version": 1,
+ "audienceOrder": [
+  "arrows",
+  "alumni",
+  "volunteers",
+  "parents"
+ ],
+ "booklets": [
+  {
+   "id": "arrows",
+   "title": "Arrows",
+   "subtitle": "Arrow Awards Program Guide",
+   "color": "#B3285F"
+  },
+  {
+   "id": "alumni",
+   "title": "Arrow Alumni",
+   "subtitle": "Arrow Alumni Awards Program Guide",
+   "color": "#1F7A8C"
+  },
+  {
+   "id": "volunteers",
+   "title": "Volunteers",
+   "subtitle": "Volunteer Awards Program Guide",
+   "color": "#3C8D2F"
+  },
+  {
+   "id": "parents",
+   "title": "Parents/Guardians",
+   "subtitle": "Parent/Guardian Awards Program Guide",
+   "color": "#D9731A"
+  }
+ ],
+ "pages": [
+  {
+   "id": "cover-arrows",
+   "type": "cover",
+   "title": "Arrow Awards Program Guide",
+   "audiences": [
+    "arrows"
+   ],
+   "label": "",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": ""
+  },
+  {
+   "id": "cover-alumni",
+   "type": "cover",
+   "title": "Arrow Alumni Awards Program Guide",
+   "audiences": [
+    "alumni"
+   ],
+   "label": "",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": ""
+  },
+  {
+   "id": "cover-volunteers",
+   "type": "cover",
+   "title": "Volunteer Awards Program Guide",
+   "audiences": [
+    "volunteers"
+   ],
+   "label": "",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": ""
+  },
+  {
+   "id": "cover-parents",
+   "type": "cover",
+   "title": "Parent/Guardian Awards Program Guide",
+   "audiences": [
+    "parents"
+   ],
+   "label": "",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": ""
+  },
+  {
+   "id": "major-a1",
+   "type": "charm",
+   "title": "Get a Job/Internship",
+   "audiences": [
+    "arrows",
+    "alumni"
+   ],
+   "label": "Major Target",
+   "intro": "Sample wording - replace with your own. Whether you're looking for your very first job or an internship that opens a door, this charm celebrates the courage it takes to go out and get hired.",
+   "steps": [
+    "Decide what kind of work interests you",
+    "Build a resume and practice interviewing",
+    "Apply and follow up",
+    "Land the job or internship",
+    "Share your news with your mentor"
+   ],
+   "purpose": "Sample wording - when I've earned this charm, I will have started a job or internship.",
+   "quote": {
+    "text": "Sample quote - replace or delete.",
+    "by": "Name"
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "a1"
+   ],
+   "earnedHow": "Manual",
+   "tickets": 200
+  },
+  {
+   "id": "major-a2",
+   "type": "charm",
+   "title": "Get Your Driver's License",
+   "audiences": [
+    "arrows",
+    "alumni"
+   ],
+   "label": "Major Target",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "a2"
+   ],
+   "earnedHow": "Manual",
+   "tickets": 200
+  },
+  {
+   "id": "major-a3",
+   "type": "charm",
+   "title": "Graduate Junior High",
+   "audiences": [
+    "arrows",
+    "alumni"
+   ],
+   "label": "Major Target",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "a3"
+   ],
+   "earnedHow": "Manual",
+   "tickets": 200
+  },
+  {
+   "id": "major-a4",
+   "type": "charm",
+   "title": "Graduate High School",
+   "audiences": [
+    "arrows",
+    "alumni"
+   ],
+   "label": "Major Target",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "a4"
+   ],
+   "earnedHow": "Manual",
+   "tickets": 200
+  },
+  {
+   "id": "major-a5",
+   "type": "charm",
+   "title": "Become a Crossbow/Bow",
+   "audiences": [
+    "arrows",
+    "alumni"
+   ],
+   "label": "Major Target",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "a5"
+   ],
+   "earnedHow": "Manual",
+   "tickets": 200
+  },
+  {
+   "id": "major-a6",
+   "type": "charm",
+   "title": "Accepted at College/Trade School",
+   "audiences": [
+    "arrows",
+    "alumni"
+   ],
+   "label": "Major Target",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "a6"
+   ],
+   "earnedHow": "Manual",
+   "tickets": 200
+  },
+  {
+   "id": "grp-school-career",
+   "type": "group",
+   "title": "School & Career",
+   "audiences": [
+    "arrows"
+   ],
+   "label": "Minor Targets",
+   "intro": "Sample wording - replace with your own. These four Minor Targets help you get ready for what comes after school. Each one you complete earns its own charm.",
+   "steps": [],
+   "purpose": "Sample wording - when I've earned these charms, I will have taken real steps toward school and work.",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "b3",
+    "b5",
+    "b6",
+    "b7"
+   ],
+   "items": [
+    {
+     "name": "Join School Leadership",
+     "appId": "b3",
+     "tickets": 30,
+     "blurb": "Sample line - one sentence about this charm.",
+     "image": ""
+    },
+    {
+     "name": "Make a Resume or Personal Website",
+     "appId": "b5",
+     "tickets": 30,
+     "blurb": "Sample line - one sentence about this charm.",
+     "image": ""
+    },
+    {
+     "name": "Apply for a Job/Internship",
+     "appId": "b6",
+     "tickets": 30,
+     "blurb": "Sample line - one sentence about this charm.",
+     "image": ""
+    },
+    {
+     "name": "Apply for College/Trade School",
+     "appId": "b7",
+     "tickets": 30,
+     "blurb": "Sample line - one sentence about this charm.",
+     "image": ""
+    }
+   ]
+  },
+  {
+   "id": "grp-faith",
+   "type": "group",
+   "title": "Faith & Memorization",
+   "audiences": [
+    "arrows"
+   ],
+   "label": "Minor Targets",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "b1",
+    "b8"
+   ],
+   "items": [
+    {
+     "name": "Memorize Arrow Statement",
+     "appId": "b1",
+     "tickets": 30,
+     "blurb": "",
+     "image": ""
+    },
+    {
+     "name": "Memorize Philippians 4:11-13",
+     "appId": "b8",
+     "tickets": 30,
+     "blurb": "",
+     "image": ""
+    }
+   ]
+  },
+  {
+   "id": "grp-life-skills",
+   "type": "group",
+   "title": "Life Skills",
+   "audiences": [
+    "arrows"
+   ],
+   "label": "Minor Targets",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "b9",
+    "b14",
+    "b15",
+    "b4"
+   ],
+   "items": [
+    {
+     "name": "Learn to Swim",
+     "appId": "b9",
+     "tickets": 30,
+     "blurb": "",
+     "image": ""
+    },
+    {
+     "name": "Learn to Read",
+     "appId": "b14",
+     "tickets": 30,
+     "blurb": "",
+     "image": ""
+    },
+    {
+     "name": "Read 5 Chapter Books",
+     "appId": "b15",
+     "tickets": 30,
+     "blurb": "",
+     "image": ""
+    },
+    {
+     "name": "Open a Savings Account",
+     "appId": "b4",
+     "tickets": 30,
+     "blurb": "",
+     "image": ""
+    }
+   ]
+  },
+  {
+   "id": "grp-stage",
+   "type": "group",
+   "title": "Stage & Competition",
+   "audiences": [
+    "arrows"
+   ],
+   "label": "Minor Targets",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "b10",
+    "b11",
+    "b2",
+    "b12",
+    "b13"
+   ],
+   "items": [
+    {
+     "name": "Public Speaking",
+     "appId": "b10",
+     "tickets": 30,
+     "blurb": "",
+     "image": ""
+    },
+    {
+     "name": "Musical Performance",
+     "appId": "b11",
+     "tickets": 30,
+     "blurb": "",
+     "image": ""
+    },
+    {
+     "name": "Play on a Sports Team",
+     "appId": "b2",
+     "tickets": 30,
+     "blurb": "",
+     "image": ""
+    },
+    {
+     "name": "Participate in a Competition",
+     "appId": "b12",
+     "tickets": 30,
+     "blurb": "",
+     "image": ""
+    },
+    {
+     "name": "Win FTN Competition",
+     "appId": "b13",
+     "tickets": 30,
+     "blurb": "",
+     "image": ""
+    }
+   ]
+  },
+  {
+   "id": "arrow-connected",
+   "type": "charm",
+   "title": "Connected Online",
+   "audiences": [
+    "arrows"
+   ],
+   "label": "Minor Target",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "b17"
+   ],
+   "earnedHow": "Manual",
+   "tickets": 30
+  },
+  {
+   "id": "arrow-bullseye",
+   "type": "charm",
+   "title": "Bullseye Award",
+   "audiences": [
+    "arrows"
+   ],
+   "label": "Bullseye",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "bull"
+   ],
+   "earnedHow": "Manual - custom text per person, one per person",
+   "tickets": 200
+  },
+  {
+   "id": "arrow-attendance",
+   "type": "group",
+   "title": "Attendance Milestones",
+   "audiences": [
+    "arrows"
+   ],
+   "label": "Attendance (automatic)",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "m1",
+    "m2",
+    "m3"
+   ],
+   "items": [
+    {
+     "name": "Bronze (2 events)",
+     "appId": "m1",
+     "tickets": 10,
+     "blurb": "",
+     "image": ""
+    },
+    {
+     "name": "Silver (4 events)",
+     "appId": "m2",
+     "tickets": 20,
+     "blurb": "",
+     "image": ""
+    },
+    {
+     "name": "Gold (12 events)",
+     "appId": "m3",
+     "tickets": 40,
+     "blurb": "",
+     "image": ""
+    }
+   ]
+  },
+  {
+   "id": "arrow-5row",
+   "type": "charm",
+   "title": "Attendance - 5 in a Row",
+   "audiences": [
+    "arrows"
+   ],
+   "label": "Attendance (automatic)",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "b16"
+   ],
+   "earnedHow": "Automatic",
+   "tickets": 30
+  },
+  {
+   "id": "vol-attendance",
+   "type": "group",
+   "title": "Volunteer Attendance Milestones",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Attendance (automatic)",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vm1",
+    "vm2",
+    "vm3"
+   ],
+   "items": [
+    {
+     "name": "Bronze (2 events)",
+     "appId": "vm1",
+     "tickets": null,
+     "blurb": "",
+     "image": ""
+    },
+    {
+     "name": "Silver (4 events)",
+     "appId": "vm2",
+     "tickets": null,
+     "blurb": "",
+     "image": ""
+    },
+    {
+     "name": "Gold (12 events)",
+     "appId": "vm3",
+     "tickets": null,
+     "blurb": "",
+     "image": ""
+    }
+   ]
+  },
+  {
+   "id": "vol-5row",
+   "type": "charm",
+   "title": "Volunteer Attendance 5 in a Row",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Attendance (automatic)",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "v5row"
+   ],
+   "earnedHow": "Automatic",
+   "tickets": null
+  },
+  {
+   "id": "vol-6yr",
+   "type": "charm",
+   "title": "Attended 6 Events in a Year",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Attendance (automatic)",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "v6yr"
+   ],
+   "earnedHow": "Automatic",
+   "tickets": null
+  },
+  {
+   "id": "vol-100hrs",
+   "type": "charm",
+   "title": "Volunteered 100 Hours",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Service (automatic)",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn6"
+   ],
+   "earnedHow": "Automatic - from volunteer hours",
+   "tickets": null
+  },
+  {
+   "id": "vol-livescan",
+   "type": "charm",
+   "title": "Live Scan/Megan's Law Status",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Safety & Training",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn1"
+   ],
+   "earnedHow": "Manual",
+   "tickets": null
+  },
+  {
+   "id": "vol-comentor",
+   "type": "charm",
+   "title": "Co-Mentor",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Mentoring",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn2"
+   ],
+   "earnedHow": "Manual",
+   "tickets": null
+  },
+  {
+   "id": "vol-mentee",
+   "type": "charm",
+   "title": "Has a Mentee",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Mentoring",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn3",
+    "vmn4"
+   ],
+   "earnedHow": "Manual (the Mentee Name field is recorded with this charm)",
+   "tickets": null
+  },
+  {
+   "id": "vol-connected",
+   "type": "charm",
+   "title": "Connected Online - Volunteer",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Connection",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn5"
+   ],
+   "earnedHow": "Manual",
+   "tickets": null
+  },
+  {
+   "id": "vol-cpr",
+   "type": "charm",
+   "title": "CPR Certified",
+   "audiences": [
+    "volunteers",
+    "alumni",
+    "parents"
+   ],
+   "label": "Safety & Training",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn7"
+   ],
+   "earnedHow": "Manual",
+   "tickets": null
+  },
+  {
+   "id": "vol-donate",
+   "type": "charm",
+   "title": "Donate or Raise $1000",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Service",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn8"
+   ],
+   "earnedHow": "Manual",
+   "tickets": null
+  },
+  {
+   "id": "vol-mandated",
+   "type": "charm",
+   "title": "Mandated Reporter",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Safety & Training",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn9"
+   ],
+   "earnedHow": "Manual",
+   "tickets": null
+  },
+  {
+   "id": "vol-refer",
+   "type": "charm",
+   "title": "Refer a Volunteer",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Connection",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn10"
+   ],
+   "earnedHow": "Manual",
+   "tickets": null
+  },
+  {
+   "id": "vol-sapt",
+   "type": "charm",
+   "title": "Sexual Assault Prevention Training",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Safety & Training",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn11"
+   ],
+   "earnedHow": "Manual",
+   "tickets": null
+  },
+  {
+   "id": "vol-spanish",
+   "type": "charm",
+   "title": "Spanish Translator",
+   "audiences": [
+    "volunteers",
+    "alumni",
+    "parents"
+   ],
+   "label": "Service",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn12"
+   ],
+   "earnedHow": "Manual",
+   "tickets": null
+  },
+  {
+   "id": "vol-pressure",
+   "type": "charm",
+   "title": "Succeeded Under Pressure",
+   "audiences": [
+    "volunteers",
+    "alumni",
+    "parents"
+   ],
+   "label": "Service",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn13"
+   ],
+   "earnedHow": "Manual",
+   "tickets": null
+  },
+  {
+   "id": "vol-teacher",
+   "type": "charm",
+   "title": "Teacher",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Service",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn14"
+   ],
+   "earnedHow": "Manual",
+   "tickets": null
+  },
+  {
+   "id": "vol-breakout",
+   "type": "charm",
+   "title": "Breakout Event Lead",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Service",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [
+    "vmn15"
+   ],
+   "earnedHow": "Manual",
+   "tickets": null
+  },
+  {
+   "id": "par-contact",
+   "type": "charm",
+   "title": "Update Contact Information",
+   "audiences": [
+    "parents"
+   ],
+   "label": "Family",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "earnedHow": "Manual (new charm - not in the app yet)",
+   "tickets": null
+  },
+  {
+   "id": "par-friend",
+   "type": "charm",
+   "title": "Refer a Friend in Need",
+   "audiences": [
+    "parents"
+   ],
+   "label": "Family",
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "earnedHow": "Manual (new charm - not in the app yet)",
+   "tickets": null
+  }
+ ]
+}
