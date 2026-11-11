@@ -13,33 +13,29 @@ and write the file name (e.g. `get-a-job.png`). Leave a field empty to skip it. 
 
 ## 1. Arrow Awards Program Guide
 - **Booklets:** Arrows
-- **Welcome text** (what this booklet is and how the program works):
+- **Welcome text** (optional - a short line under the title. Leave blank for a title-only cover):
   > 
-- **Cover image:** 
 
 ---
 
 ## 2. Arrow Alumni Awards Program Guide
 - **Booklets:** Arrow Alumni
-- **Welcome text** (what this booklet is and how the program works):
+- **Welcome text** (optional - a short line under the title. Leave blank for a title-only cover):
   > 
-- **Cover image:** 
 
 ---
 
 ## 3. Volunteer Awards Program Guide
 - **Booklets:** Volunteers
-- **Welcome text** (what this booklet is and how the program works):
+- **Welcome text** (optional - a short line under the title. Leave blank for a title-only cover):
   > 
-- **Cover image:** 
 
 ---
 
 ## 4. Parent/Guardian Awards Program Guide
 - **Booklets:** Parents/Guardians
-- **Welcome text** (what this booklet is and how the program works):
+- **Welcome text** (optional - a short line under the title. Leave blank for a title-only cover):
   > 
-- **Cover image:** 
 
 ---
 
