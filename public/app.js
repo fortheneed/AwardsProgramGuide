@@ -111,8 +111,8 @@
 
     const main = h('div', {class: 'pg-main'});
     // Only single-charm pages get a big charm slot; pages with several charms show them in the cards below.
-    main.append(h('div', {class: 'pg-banner' + (p.type === 'group' ? ' short' : '')}, hexSvg(BANNER_HEXES, 566, 230, '#fff'),
-      p.type === 'group' ? null : h('div', {class: 'badge', 'data-slot': E ? 'image' : null}, p.image ? img(p.image, p.title) : h('div', {class: 'b-empty'}, 'Charm'))));
+    main.append(h('div', {class: 'pg-banner' + ((p.type === 'group' || p.type === 'info') ? ' short' : '')}, hexSvg(BANNER_HEXES, 566, 230, '#fff'),
+      (p.type === 'group' || p.type === 'info') ? null : h('div', {class: 'badge', 'data-slot': E ? 'image' : null}, p.image ? img(p.image, p.title) : h('div', {class: 'b-empty'}, 'Charm'))));
 
     main.append(h('div', {class: 'pg-title' + (p.title.length > 22 ? ' long' : '')},
       labelText(p) ? h('div', {class: 'pg-label'}, labelText(p)) : null,
@@ -122,7 +122,15 @@
     body.append(E ? fld('p', 'pg-intro nodrop', 'intro', p.intro, 'Write the intro paragraph here')
                   : h('p', {class: 'pg-intro' + (p.intro ? '' : ' nodrop')}, p.intro || blank('Intro paragraph goes here.')));
 
-    if(p.type === 'charm'){
+    if(p.type === 'info'){
+      // Explanation page: a list of short sections (heading + text), optionally numbered; highlight makes one stand out.
+      body.append(h('div', {class: 'info-secs'}, (p.sections || []).map((s, i) => h('div', {class: 'info-sec' + (s.highlight ? ' hl' : '')},
+        p.numbered && !s.highlight ? h('div', {class: 'info-n'}, String(i + 1)) : null,
+        h('div', {class: 'info-t'},
+          E ? fld('div', 'info-h', 'sections.' + i + '.heading', s.heading, 'Heading') : h('div', {class: 'info-h'}, s.heading),
+          E ? fld('div', 'info-p', 'sections.' + i + '.text', s.text, 'Text') : h('div', {class: 'info-p'}, s.text),
+          (s.big || E) ? (E ? fld('div', 'info-big', 'sections.' + i + '.big', s.big, 'Large highlighted line (optional)') : h('div', {class: 'info-big'}, s.big)) : null)))));
+    } else if(p.type === 'charm'){
       body.append(h('div', {class: 'pg-h'}, 'Steps'));
       if(E){
         const steps = (p.steps && p.steps.length) ? p.steps : [''];

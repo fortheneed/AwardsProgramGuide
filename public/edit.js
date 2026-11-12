@@ -206,6 +206,7 @@
       if(Array.isArray(p.steps)) p.steps = p.steps.map(t).filter(Boolean);
       if(p.quote){ p.quote.text = t(p.quote.text); p.quote.by = t(p.quote.by); }
       (p.items || []).forEach((it) => { it.blurb = t(it.blurb); });
+      (p.sections || []).forEach((x) => { x.heading = t(x.heading); x.text = t(x.text); if("big" in x) x.big = t(x.big); });
     });
   }
   function usedImages(data){

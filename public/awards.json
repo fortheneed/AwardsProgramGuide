@@ -126,6 +126,310 @@
    "photo2": ""
   },
   {
+   "type": "info",
+   "label": "How It Works",
+   "section": "How It Works",
+   "tickets": null,
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "id": "how-tickets",
+   "title": "How Charms Work",
+   "audiences": [
+    "arrows",
+    "alumni"
+   ],
+   "numbered": true,
+   "intro": "Welcome! A charm is how we celebrate something you've done. Every achievement in this guide has its own charm, and each page that follows shows what it takes to earn it.",
+   "sections": [
+    {
+     "heading": "Pick a goal",
+     "text": "Look through the Table of Contents. Each page is one charm, or a small group of charms, with the steps to earn it."
+    },
+    {
+     "heading": "Do the work",
+     "text": "Follow the steps on the page. Ask a staff member or volunteer anytime you have a question."
+    },
+    {
+     "heading": "Report it",
+     "text": "When you have unlocked an achievement, turn in the small sheet at the check-in table. The Reporting Your Achievements page has the details."
+    },
+    {
+     "heading": "Collect your charm and tickets",
+     "text": "Once an achievement is recorded, the charm is yours, along with any tickets listed at the top of its page."
+    },
+    {
+     "heading": "Good to know",
+     "text": "A few charms, like 5 in a Row, are counted for you automatically. You don't need to report those.",
+     "highlight": true
+    }
+   ]
+  },
+  {
+   "type": "info",
+   "label": "How It Works",
+   "section": "How It Works",
+   "tickets": null,
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "id": "how-plain",
+   "title": "How Charms Work",
+   "audiences": [
+    "volunteers",
+    "parents"
+   ],
+   "numbered": true,
+   "intro": "Welcome! A charm is how we celebrate something you've done. Every achievement in this guide has its own charm, and each page that follows shows what it takes to earn it.",
+   "sections": [
+    {
+     "heading": "Pick a goal",
+     "text": "Look through the Table of Contents. Each page is one charm, or a small group of charms, with the steps to earn it."
+    },
+    {
+     "heading": "Do the work",
+     "text": "Follow the steps on the page. Ask a For the Need staff member anytime you have a question."
+    },
+    {
+     "heading": "Report it",
+     "text": "When you have unlocked an achievement, turn in the small sheet at the check-in table. The Reporting Your Achievements page has the details."
+    },
+    {
+     "heading": "Collect your charm",
+     "text": "Once an achievement is recorded, the charm is yours."
+    },
+    {
+     "heading": "Good to know",
+     "text": "A few charms, like 5 in a Row, are counted for you automatically. You don't need to report those.",
+     "highlight": true
+    }
+   ]
+  },
+  {
+   "type": "info",
+   "label": "How It Works",
+   "section": "How It Works",
+   "tickets": null,
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "id": "kinds-arrows",
+   "title": "Types of Charms",
+   "audiences": [
+    "arrows"
+   ],
+   "intro": "Charms come in a few different kinds. Here is a quick look at each one, and the tickets that come with it.",
+   "sections": [
+    {
+     "heading": "Major Targets – 200 tickets",
+     "text": "Big life goals, like graduating, getting a job, or earning your driver’s license."
+    },
+    {
+     "heading": "Minor Targets – 30 tickets",
+     "text": "Smaller skills and experiences, from Life Skills to Stage & Competition, plus Connected Online and Attended Camp."
+    },
+    {
+     "heading": "Bullseye Award – 200 tickets",
+     "text": "A special award with words written just for you. Each person can earn one."
+    },
+    {
+     "heading": "Attendance",
+     "text": "Show up and earn charms. Bronze (2 events) is worth 10 tickets, Silver (4 events) 20, and Gold (12 events) 40. Attendance – 5 in a Row is worth 30."
+    },
+    {
+     "heading": "Club Attendance",
+     "text": "Every club has its own charm, and new clubs are added all the time."
+    }
+   ]
+  },
+  {
+   "type": "info",
+   "label": "How It Works",
+   "section": "How It Works",
+   "tickets": null,
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "id": "kinds-alumni",
+   "title": "Types of Charms",
+   "audiences": [
+    "alumni"
+   ],
+   "intro": "Alumni can earn charms in two ways: through the big goals you are still chasing, and through the ways you give back as a volunteer.",
+   "sections": [
+    {
+     "heading": "Major Targets – 200 tickets",
+     "text": "Big life goals, like graduating, getting a job, or earning your driver’s license."
+    },
+    {
+     "heading": "Attendance",
+     "text": "Charms for coming to events as a volunteer, including Bronze, Silver, Gold, and 5 in a Row."
+    },
+    {
+     "heading": "Service & Leadership",
+     "text": "Charms for giving your time and skills, like volunteering 100 hours, teaching, or leading a club."
+    },
+    {
+     "heading": "Mentoring",
+     "text": "Charms for mentoring, like being a Co-Mentor or having a Mentee."
+    },
+    {
+     "heading": "Safety & Training",
+     "text": "Background checks and trainings that keep everyone safe, like Mandated Reporter and CPR Certified."
+    },
+    {
+     "heading": "Connection",
+     "text": "Charms for connecting online and referring a new volunteer."
+    }
+   ]
+  },
+  {
+   "type": "info",
+   "label": "How It Works",
+   "section": "How It Works",
+   "tickets": null,
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "id": "kinds-volunteers",
+   "title": "Types of Charms",
+   "audiences": [
+    "volunteers"
+   ],
+   "intro": "Volunteer charms recognize the time, care, and training you bring to For the Need. Here is what you can earn.",
+   "sections": [
+    {
+     "heading": "Attendance",
+     "text": "Charms for coming to events, including Bronze, Silver, Gold, and 5 in a Row."
+    },
+    {
+     "heading": "Service & Leadership",
+     "text": "Charms for giving your time and skills, like volunteering 100 hours, teaching, or leading a club."
+    },
+    {
+     "heading": "Mentoring",
+     "text": "Charms for mentoring, like being a Co-Mentor or having a Mentee."
+    },
+    {
+     "heading": "Safety & Training",
+     "text": "Background checks and trainings that keep everyone safe, like Mandated Reporter and CPR Certified."
+    },
+    {
+     "heading": "Connection",
+     "text": "Charms for connecting online and referring a new volunteer."
+    }
+   ]
+  },
+  {
+   "type": "info",
+   "label": "How It Works",
+   "section": "How It Works",
+   "tickets": null,
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "id": "kinds-parents",
+   "title": "Types of Charms",
+   "audiences": [
+    "parents"
+   ],
+   "intro": "Parent/Guardian charms celebrate the ways your family is part of For the Need. Here is what you can earn.",
+   "sections": [
+    {
+     "heading": "Family",
+     "text": "Charms for keeping in touch and helping other families, like Update Contact Information and Refer a Friend in Need."
+    },
+    {
+     "heading": "Service & Leadership",
+     "text": "Charms for stepping up, like Spanish Translator and Succeeded Under Pressure."
+    },
+    {
+     "heading": "Safety & Training",
+     "text": "Training that helps keep everyone safe, like CPR Certified."
+    }
+   ]
+  },
+  {
+   "type": "info",
+   "label": "How It Works",
+   "section": "How It Works",
+   "tickets": null,
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "id": "report",
+   "title": "Reporting Your Achievements",
+   "audiences": [
+    "arrows",
+    "alumni",
+    "volunteers",
+    "parents"
+   ],
+   "numbered": true,
+   "intro": "Unlocked something? We want to celebrate it! Here is how to make sure it gets recorded.",
+   "sections": [
+    {
+     "heading": "Report what you've unlocked",
+     "text": "Turn in the small sheet at the check-in table to report the achievements you have unlocked."
+    },
+    {
+     "heading": "Missing a charm?",
+     "text": "If a charm you earned has not shown up, text the For the Need phone to report it.",
+     "big": "805-328-0970",
+     "highlight": true
+    }
+   ]
+  },
+  {
    "id": "major-a1",
    "type": "charm",
    "title": "Get a Job/Internship",

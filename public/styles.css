@@ -73,6 +73,23 @@ body{font-family:"Palanquin","Helvetica Neue",Arial,sans-serif;color:var(--ink);
 .who span{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:10px;
   background:#fff;border:1.5px solid var(--accent-ink);color:var(--accent-ink)}
 
+/* Explanation pages (How It Works) */
+.info-secs{display:flex;flex-direction:column;gap:calc(10px*var(--ts));margin-top:4px}
+.info-sec{display:flex;gap:14px;align-items:flex-start;background:#fff;border:2px solid color-mix(in srgb,var(--accent) 35%,#fff);border-radius:14px;padding:calc(10px*var(--ts)) 14px}
+.info-sec.hl{background:var(--tint);border-color:var(--accent-ink)}
+.info-n{flex:0 0 auto;width:calc(32px*var(--ts));height:calc(32px*var(--ts));border-radius:50%;background:var(--accent);color:var(--cover-text);
+  font-weight:800;font-size:calc(16px*var(--ts));display:flex;align-items:center;justify-content:center}
+.info-t{min-width:0;flex:1}
+.info-h{font-weight:800;font-size:calc(15.5px*var(--ts));color:var(--title);line-height:1.2}
+.info-p{font-size:calc(14px*var(--ts));line-height:1.45;margin-top:3px}
+.info-big{font-weight:800;font-size:calc(26px*var(--ts));color:var(--title);margin-top:6px;letter-spacing:.02em}
+.info-sec.hl .info-h{color:var(--accent-ink)}
+.page.mobile .info-sec{padding:12px 14px}
+.page.mobile .info-n{width:32px;height:32px;font-size:16px}
+.page.mobile .info-h{font-size:17px}
+.page.mobile .info-p{font-size:16px}
+.page.mobile .info-big{font-size:28px}
+
 /* Cover: title only, slightly above center, faint hexagons in the booklet color */
 .page.cover{display:block;background:var(--accent);color:var(--cover-text)}
 .page.cover .hexes{position:absolute;inset:0;width:100%;height:100%}
