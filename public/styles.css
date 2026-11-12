@@ -41,12 +41,13 @@ body{font-family:"Palanquin","Helvetica Neue",Arial,sans-serif;color:var(--ink);
 .pg-title.long h1{font-size:38px}
 
 .pg-body{flex:1;padding:22px 34px 56px;background:linear-gradient(180deg,#fff 0,var(--tint) 100%);position:relative;overflow:hidden}
-.pg-intro{font-size:15.5px;line-height:1.5;margin:0 0 16px}
+.page{--fs:1;--ts:min(var(--fs),1.45);--cts:min(calc(var(--fs)*1.25),1.9)}
+.pg-intro{font-size:calc(15.5px*var(--ts));line-height:1.5;margin:0 0 16px}
 .pg-intro::first-letter{font-size:46px;font-weight:700;color:var(--accent-ink);float:left;line-height:.9;margin:4px 6px 0 0}
 .pg-intro.nodrop::first-letter{font-size:inherit;font-weight:inherit;float:none;color:inherit;margin:0}
-.pg-h{font-size:17px;font-weight:700;color:var(--accent-ink);margin:14px 0 6px}
-.pg-steps{margin:0;padding-left:22px;font-size:14.5px;line-height:1.5;max-width:330px}
-.pg-purpose{font-size:14px;line-height:1.45;margin:0;max-width:330px}
+.pg-h{font-size:calc(17px*var(--ts));font-weight:700;color:var(--accent-ink);margin:14px 0 6px}
+.pg-steps{margin:0;padding-left:22px;font-size:calc(14.5px*var(--ts));line-height:1.5;max-width:330px}
+.pg-purpose{font-size:calc(14px*var(--ts));line-height:1.45;margin:0;max-width:330px}
 .pg-purpose strong{color:var(--title)}
 .pg-photo2{position:absolute;right:26px;bottom:44px;width:190px;height:190px;border-radius:50%;overflow:hidden;
   border:5px solid #fff;background:linear-gradient(160deg,var(--accent),var(--navy));box-shadow:0 4px 14px rgba(0,0,0,.2)}
@@ -54,14 +55,16 @@ body{font-family:"Palanquin","Helvetica Neue",Arial,sans-serif;color:var(--ink);
 .pg-photo2.empty{display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
 
 /* Group page: cards for each charm */
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:4px 0 12px}
-.cards.n1,.cards.n3.single{grid-template-columns:1fr}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:4px 0 12px}
+.cards.n1,.cards.one{grid-template-columns:minmax(0,1fr)}
+.page.stk .card{flex-direction:column;align-items:center;text-align:center}
+.page.stk .card .mini{flex:none;width:calc(150px*var(--fs));height:calc(150px*var(--fs));max-width:100%}
 .card{background:#fff;border:2px solid color-mix(in srgb,var(--accent) 35%,#fff);border-radius:14px;padding:10px 12px;display:flex;gap:12px;align-items:flex-start}
-.card .mini{flex:0 0 120px;height:120px;border-radius:14px;background:var(--tint);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:9px;color:#8a8fa0;text-align:center;text-transform:uppercase}
+.card .mini{flex:0 0 calc(120px*var(--fs));height:calc(120px*var(--fs));border-radius:14px;background:var(--tint);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:9px;color:#8a8fa0;text-align:center;text-transform:uppercase}
 .card .mini img{width:100%;height:100%;object-fit:contain}
-.card .nm{font-weight:800;font-size:13.5px;color:var(--title);line-height:1.2}
-.card .bl{font-size:12px;line-height:1.35;margin-top:3px}
-.card .tx{font-size:11px;font-weight:700;color:var(--accent-ink);margin-top:3px}
+.card .nm{font-weight:800;font-size:calc(13.5px*var(--cts));color:var(--title);line-height:1.2}
+.card .bl{font-size:calc(12px*var(--cts));line-height:1.35;margin-top:3px}
+.card .tx{font-size:calc(11px*var(--cts));font-weight:700;color:var(--accent-ink);margin-top:3px}
 
 .pg-foot{position:absolute;left:0;right:0;bottom:0;height:34px;display:flex;align-items:center;justify-content:flex-end;
   padding:0 20px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6b7080}
@@ -106,7 +109,7 @@ body{font-family:"Palanquin","Helvetica Neue",Arial,sans-serif;color:var(--ink);
 .page.mobile .pg-intro{font-size:17px}
 .page.mobile .pg-steps,.page.mobile .pg-purpose{max-width:none;font-size:16px}
 .page.mobile .cards{grid-template-columns:1fr}
-.page.mobile .card .mini{flex-basis:88px;height:88px}
+.page.mobile .card .mini{flex-basis:104px;height:104px}
 .page.mobile .card .nm{font-size:15.5px}
 .page.mobile .card .bl{font-size:14px}
 .page.mobile .card .tx{font-size:12px}

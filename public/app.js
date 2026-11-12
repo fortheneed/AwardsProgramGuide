@@ -155,7 +155,43 @@
     body.append(h('div', {class: 'pg-foot'}, booklet.title, h('b', null, '|'), String(pageNo)));
     main.append(body);
     page.append(main);
+    if(!opts.mobile && !opts.edit) fit(page, p);
     return page;
+  }
+
+  // Fill empty space: grow the charm cards and text as large as still fits the page (never past a sensible cap).
+  // Measured off-screen at full page size, so it gives the same result on screen and in print.
+  function fit(page, p){
+    const body = page.querySelector('.pg-body'); if(!body) return;
+    const holder = h('div', {style: 'position:absolute;left:-10000px;top:0;visibility:hidden;width:' + PW + 'px;height:' + PH + 'px'}, page);
+    document.body.append(holder);
+    try{
+      const cards = page.querySelector('.cards');
+      const reserve = (p.type === 'group' && p.photo2) ? 262 : 70; // keep clear of the round photo / page footer
+      const fits = () => {
+        let bottom = 0;
+        Array.from(body.children).forEach(c => { if(getComputedStyle(c).position !== 'absolute') bottom = Math.max(bottom, c.offsetTop + c.offsetHeight); });
+        return bottom <= body.clientHeight - reserve;
+      };
+      const grow = (min, max) => {
+        let best = null;
+        for(let s = min; s <= max + 1e-6; s += 0.05){
+          page.style.setProperty('--fs', s.toFixed(2));
+          if(fits()) best = s; else break;
+        }
+        return best;
+      };
+      if(cards){
+        const n = p.items.length;
+        let best = null;
+        if(n <= 3){ cards.classList.add('one'); best = grow(1, 1.8); }
+        else { page.classList.add('stk'); best = grow(0.8, 1.4); if(best === null) page.classList.remove('stk'); }
+        if(best === null){ cards.classList.remove('one'); best = grow(1, 1) || 1; }
+        page.style.setProperty('--fs', String(best));
+      } else {
+        const best = grow(1, 1.45); page.style.setProperty('--fs', String(best || 1));
+      }
+    } finally { holder.remove(); }
   }
 
   function wrap(pageEl){
