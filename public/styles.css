@@ -101,7 +101,9 @@ body{font-family:"Palanquin","Helvetica Neue",Arial,sans-serif;color:var(--ink);
 .page.mobile .pg-main{display:block}
 .page.mobile .pg-quote-m{margin:18px 0 0}
 .page.mobile .pg-quote-m .pg-quote{position:static;width:100%;font-size:16px;border-radius:10px}
+.pg-banner.short{height:120px}
 .page.mobile .pg-banner{height:124px}
+.page.mobile .pg-banner.short{height:70px}
 .page.mobile .badge{width:92px;height:92px;border-radius:20px}
 .page.mobile .pg-title{padding:20px 18px 8px}
 .page.mobile .pg-title h1,.page.mobile .pg-title.long h1{font-size:32px}

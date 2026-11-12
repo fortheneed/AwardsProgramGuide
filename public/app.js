@@ -110,8 +110,9 @@
     if(!opts.mobile) page.append(photoCol(p, E)); // phones skip the big side photo so the charm shows right away
 
     const main = h('div', {class: 'pg-main'});
-    main.append(h('div', {class: 'pg-banner'}, hexSvg(BANNER_HEXES, 566, 230, '#fff'),
-      h('div', {class: 'badge', 'data-slot': E ? 'image' : null}, p.image ? img(p.image, p.title) : h('div', {class: 'b-empty'}, 'Charm'))));
+    // Only single-charm pages get a big charm slot; pages with several charms show them in the cards below.
+    main.append(h('div', {class: 'pg-banner' + (p.type === 'group' ? ' short' : '')}, hexSvg(BANNER_HEXES, 566, 230, '#fff'),
+      p.type === 'group' ? null : h('div', {class: 'badge', 'data-slot': E ? 'image' : null}, p.image ? img(p.image, p.title) : h('div', {class: 'b-empty'}, 'Charm'))));
 
     main.append(h('div', {class: 'pg-title' + (p.title.length > 22 ? ' long' : '')},
       labelText(p) ? h('div', {class: 'pg-label'}, labelText(p)) : null,
