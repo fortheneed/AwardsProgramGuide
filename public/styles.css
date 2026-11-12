@@ -74,10 +74,10 @@ body{font-family:"Palanquin","Helvetica Neue",Arial,sans-serif;color:var(--ink);
 .page.cover{display:block;background:var(--accent);color:var(--cover-text)}
 .page.cover .hexes{position:absolute;inset:0;width:100%;height:100%}
 .page.cover .cover-box{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;padding:0 90px 190px}
+  text-align:center;padding:0 90px 40px}
 .page.cover h1{margin:0;font-size:72px;line-height:1.05;font-weight:700;color:var(--cover-text);max-width:640px}
 .page.cover p{margin:26px 0 0;font-size:18px;line-height:1.5;max-width:520px;color:var(--cover-text)}
-.cover-logo{position:absolute;left:50%;bottom:74px;transform:translateX(-50%);width:340px;padding:26px 34px;border-radius:30px;background:#002C66;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.cover-logo{position:static;margin:0 0 56px;width:300px;padding:26px 34px;border-radius:30px;background:#002C66;box-shadow:0 6px 18px rgba(0,0,0,.18)}
 .cover-logo img{display:block;width:100%;height:auto}
 
 /* Table of contents (page 2) */
@@ -113,8 +113,8 @@ body{font-family:"Palanquin","Helvetica Neue",Arial,sans-serif;color:var(--ink);
 .page.mobile .pg-photo2{position:static;width:150px;height:150px;margin:20px auto 4px}
 .page.mobile .pg-foot{position:static;height:auto;padding:12px 0 0;justify-content:center}
 .page.cover.mobile{height:66vh;min-height:440px}
-.page.cover.mobile .cover-box{padding:0 26px 110px}
-.page.cover.mobile .cover-logo{width:230px;padding:16px 20px;border-radius:20px;bottom:30px}
+.page.cover.mobile .cover-box{padding:0 26px 30px}
+.page.cover.mobile .cover-logo{width:200px;padding:16px 20px;border-radius:20px;margin-bottom:30px}
 .page.toc.mobile .toc-banner{height:120px;padding:0 20px}
 .page.toc.mobile .toc-banner h1{font-size:34px}
 .page.toc.mobile .toc-body{columns:1;padding:14px 18px 26px}

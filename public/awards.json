@@ -655,16 +655,16 @@
    "earnedHow": "Automatic"
   },
   {
-   "id": "arrow-clubs",
+   "id": "arrow-clubs-past",
    "type": "group",
-   "title": "Club Attendance Charms",
+   "title": "Past Clubs",
    "audiences": [
     "arrows"
    ],
    "label": "Club Attendance",
    "section": "Club Attendance",
    "tickets": null,
-   "intro": "Each club has its own charm. New clubs and charms are added over time.",
+   "intro": "Clubs are usually one-time events, and each one has its own charm. Here are some we have run so far.",
    "steps": [],
    "purpose": "",
    "quote": {
@@ -696,12 +696,58 @@
      "tickets": null,
      "blurb": "Build your dream house.",
      "image": ""
+    }
+   ],
+   "earnedHow": "Manual (new charms - not in the app yet)"
+  },
+  {
+   "id": "arrow-clubs-upcoming",
+   "type": "group",
+   "title": "Upcoming Clubs",
+   "audiences": [
+    "arrows"
+   ],
+   "label": "Club Attendance",
+   "section": "Club Attendance",
+   "tickets": null,
+   "intro": "Each club earns its own charm. New clubs are added all the time.",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "items": [
+    {
+     "name": "Hiking Club",
+     "appId": "",
+     "tickets": null,
+     "blurb": "",
+     "image": ""
+    },
+    {
+     "name": "Music Club",
+     "appId": "",
+     "tickets": null,
+     "blurb": "",
+     "image": ""
     },
     {
      "name": "Leadership Club",
      "appId": "",
      "tickets": null,
-     "blurb": "Coming soon.",
+     "blurb": "",
+     "image": ""
+    },
+    {
+     "name": "And More…",
+     "appId": "",
+     "tickets": null,
+     "blurb": "More clubs are on the way.",
      "image": ""
     }
    ],
@@ -914,6 +960,30 @@
    "earnedHow": "Manual"
   },
   {
+   "id": "vol-clubleader",
+   "type": "charm",
+   "title": "Club Leader",
+   "audiences": [
+    "volunteers",
+    "alumni"
+   ],
+   "label": "Service & Leadership",
+   "section": "Service & Leadership",
+   "tickets": null,
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "poster-vol-clubleader.png",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "earnedHow": "Manual (new charm - not in the app yet)"
+  },
+  {
    "id": "vol-spanish",
    "type": "charm",
    "title": "Spanish Translator",
@@ -1022,8 +1092,8 @@
   },
   {
    "id": "vol-livescan",
-   "type": "charm",
-   "title": "Live Scan/Megan's Law Status",
+   "type": "group",
+   "title": "Background Checks",
    "audiences": [
     "volunteers",
     "alumni"
@@ -1038,13 +1108,29 @@
     "text": "",
     "by": ""
    },
-   "image": "poster-vol-livescan.png",
+   "image": "",
    "photo": "",
    "photo2": "",
    "appIds": [
     "vmn1"
    ],
-   "earnedHow": "Manual"
+   "earnedHow": "Manual",
+   "items": [
+    {
+     "name": "Live Scan/Megan's Law Status",
+     "appId": "vmn1",
+     "tickets": null,
+     "blurb": "",
+     "image": "poster-vol-livescan.png"
+    },
+    {
+     "name": "Driver Record Check",
+     "appId": "",
+     "tickets": null,
+     "blurb": "",
+     "image": "poster-vol-driver.png"
+    }
+   ]
   },
   {
    "id": "vol-mandated",

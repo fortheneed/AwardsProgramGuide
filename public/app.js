@@ -65,15 +65,15 @@
     return h('div', {class: 'pg-quote'}, '“' + q.text + '”', q.by ? h('span', {class: 'by'}, '—' + q.by) : null);
   }
 
-  // Cover: booklet-color background, title a little above center, our logo at the bottom.
+  // Cover: booklet-color background, logo above the title, both centered.
   function renderCover(p, booklet, opts){
     const E = !!opts.edit;
     const page = h('div', {class: 'page cover' + mob(opts), style: accentStyle(booklet)});
     page.append(hexSvg(COVER_HEXES, PW, PH, '#fff', opts.mobile ? 'xMidYMid slice' : 'xMidYMid meet'));
     page.append(h('div', {class: 'cover-box'},
+      h('div', {class: 'cover-logo'}, h('img', {src: LOGO, alt: 'For the Need Foundation'})),
       E ? fld('h1', '', 'title', p.title, 'Cover title') : h('h1', null, p.title),
       E ? fld('p', '', 'intro', p.intro, 'Welcome text (optional)') : (p.intro ? h('p', null, p.intro) : null)));
-    page.append(h('div', {class: 'cover-logo'}, h('img', {src: LOGO, alt: 'For the Need Foundation'})));
     return page;
   }
 
