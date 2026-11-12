@@ -166,7 +166,7 @@
     },
     {
      "heading": "Good to know",
-     "text": "A few charms, like 5 in a Row, are counted for you automatically. You don't need to report those.",
+     "text": "Attendance charms are counted for you automatically. You don’t need to report those.",
      "highlight": true
     }
    ]
@@ -292,19 +292,15 @@
     },
     {
      "heading": "Minor Targets – 30 tickets",
-     "text": "Smaller skills and experiences, from Life Skills to Stage & Competition, plus Connected Online and Attended Camp."
+     "text": "Smaller goals and skills that help you grow along the way."
     },
     {
      "heading": "Bullseye Award – 200 tickets",
      "text": "A special award with words written just for you. Each person can earn one."
     },
     {
-     "heading": "Attendance",
-     "text": "Show up and earn charms. Bronze (2 events) is worth 10 tickets, Silver (4 events) 20, and Gold (12 events) 40. Attendance – 5 in a Row is worth 30."
-    },
-    {
-     "heading": "Club Attendance",
-     "text": "Every club has its own charm, and new clubs are added all the time."
+     "heading": "Attendance Charms",
+     "text": "Charms for showing up. The ticket values vary, and these are counted for you automatically."
     }
    ]
   },
@@ -328,7 +324,7 @@
    "audiences": [
     "alumni"
    ],
-   "intro": "Alumni can earn charms in two ways: through the big goals you are still chasing, and through the ways you give back as a volunteer.",
+   "intro": "You can earn charms in two ways: through the big goals you are still chasing, and through the ways you give back as a volunteer.",
    "sections": [
     {
      "heading": "Major Targets – 200 tickets",
@@ -344,7 +340,7 @@
     },
     {
      "heading": "Mentoring",
-     "text": "Charms for mentoring, like being a Co-Mentor or having a Mentee."
+     "text": "Charms for mentoring, like being a Co-Mentor or having a Golden Match."
     },
     {
      "heading": "Safety & Training",
@@ -388,7 +384,7 @@
     },
     {
      "heading": "Mentoring",
-     "text": "Charms for mentoring, like being a Co-Mentor or having a Mentee."
+     "text": "Charms for mentoring, like being a Co-Mentor or having a Golden Match."
     },
     {
      "heading": "Safety & Training",
@@ -497,15 +493,15 @@
    "audiences": [
     "alumni"
    ],
-   "intro": "When an Arrow turns 18 and joins the Arrow Alumni Launch Program, the tickets they earned as an Arrow can be cashed out.",
+   "intro": "When you turn 18 and join the Arrow Alumni Launch Program, the tickets you earned as an Arrow can be cashed out.",
    "sections": [
     {
      "heading": "What is AALP?",
-     "text": "The Arrow Alumni Launch Program helps Arrow Alumni take their next steps toward independence, with mentorship, job opportunities, driver’s license help, and support with transportation."
+     "text": "The Arrow Alumni Launch Program helps you take your next steps toward independence, with mentorship, job opportunities, driver’s license help, and support with transportation."
     },
     {
      "heading": "Cash out at half value",
-     "text": "Tickets cash out at half of their value.",
+     "text": "Your tickets cash out at half of their value.",
      "highlight": true,
      "big": "1,000 tickets = $500"
     },
@@ -865,7 +861,7 @@
   {
    "id": "grp-life-skills",
    "type": "group",
-   "title": "Life Skills",
+   "title": "Skills",
    "audiences": [
     "arrows"
    ],
@@ -994,9 +990,16 @@
    "label": "Minor Target",
    "section": "Minor Targets",
    "tickets": 30,
-   "intro": "",
-   "steps": [],
-   "purpose": "",
+   "intro": "Stay in touch with your mentor between events by connecting on Microsoft Teams. Follow the steps below. If you have any issues, tell staff at 805‑328‑0970.",
+   "steps": [
+    "Request an account from staff. Text 805‑328‑0970, or ask Allie to make you an account on the spot at an event if she has a moment.",
+    "Download the app “Microsoft Teams”.",
+    "Open the app and allow notifications.",
+    "Log in to the account staff created for you. Your username is FIRSTNAMEarrow@fortheneed.org, and staff will give you a temporary password.",
+    "Create your own password. Remember your password!",
+    "Send a message to your mentor! Your mentor’s address is MENTORFIRSTNAMEbow@fortheneed.org."
+   ],
+   "purpose": "When I've earned this charm, I will be connected online and able to message my mentor between events.",
    "quote": {
     "text": "",
     "by": ""
@@ -1411,32 +1414,6 @@
    "earnedHow": "Manual"
   },
   {
-   "id": "vol-breakout",
-   "type": "charm",
-   "title": "Breakout Event Lead",
-   "audiences": [
-    "volunteers",
-    "alumni"
-   ],
-   "label": "Service & Leadership",
-   "section": "Service & Leadership",
-   "tickets": null,
-   "intro": "",
-   "steps": [],
-   "purpose": "",
-   "quote": {
-    "text": "",
-    "by": ""
-   },
-   "image": "",
-   "photo": "",
-   "photo2": "",
-   "appIds": [
-    "vmn15"
-   ],
-   "earnedHow": "Manual"
-  },
-  {
    "id": "vol-clubleader",
    "type": "charm",
    "title": "Club Leader",
@@ -1543,7 +1520,7 @@
   {
    "id": "vol-mentee",
    "type": "charm",
-   "title": "Has a Mentee",
+   "title": "Has a Golden Match",
    "audiences": [
     "volunteers",
     "alumni"
@@ -1565,7 +1542,7 @@
     "vmn3",
     "vmn4"
    ],
-   "earnedHow": "Manual (the Mentee Name field is recorded with this charm)"
+   "earnedHow": "Manual (the Golden Match name is recorded with this charm)"
   },
   {
    "id": "vol-livescan",
@@ -1699,9 +1676,16 @@
    "label": "Connection",
    "section": "Connection",
    "tickets": null,
-   "intro": "",
-   "steps": [],
-   "purpose": "",
+   "intro": "Stay in touch with your mentor between events by connecting on Microsoft Teams. Follow the steps below. If you have any issues, tell staff at 805‑328‑0970.",
+   "steps": [
+    "Request an account from staff. Text 805‑328‑0970, or ask Allie to make you an account on the spot at an event if she has a moment.",
+    "Download the app “Microsoft Teams”.",
+    "Open the app and allow notifications.",
+    "Log in to the account staff created for you, using the username and temporary password staff gives you.",
+    "Create your own password. Remember your password!",
+    "Send a message to your mentor! Your mentor’s address is MENTORFIRSTNAMEbow@fortheneed.org."
+   ],
+   "purpose": "When I've earned this charm, I will be connected online and able to message my mentor between events.",
    "quote": {
     "text": "",
     "by": ""
