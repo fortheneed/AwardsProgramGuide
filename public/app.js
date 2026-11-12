@@ -129,7 +129,9 @@
         h('div', {class: 'info-t'},
           E ? fld('div', 'info-h', 'sections.' + i + '.heading', s.heading, 'Heading') : h('div', {class: 'info-h'}, s.heading),
           E ? fld('div', 'info-p', 'sections.' + i + '.text', s.text, 'Text') : h('div', {class: 'info-p'}, s.text),
-          (s.big || E) ? (E ? fld('div', 'info-big', 'sections.' + i + '.big', s.big, 'Large highlighted line (optional)') : h('div', {class: 'info-big'}, s.big)) : null)))));
+          (s.big || E) ? (E ? fld('div', 'info-big', 'sections.' + i + '.big', s.big, 'Large highlighted line (optional)') : h('div', {class: 'info-big'}, s.big)) : null,
+          // optional "learn more" link (https only), opens in a new tab
+          (s.link && /^https:\/\//.test(s.link.url || '')) ? h('a', {class: 'info-link', href: s.link.url, target: '_blank', rel: 'noopener noreferrer'}, s.link.text || s.link.url) : null)))));
     } else if(p.type === 'charm'){
       body.append(h('div', {class: 'pg-h'}, 'Steps'));
       if(E){

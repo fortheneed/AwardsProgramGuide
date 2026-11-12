@@ -140,10 +140,55 @@
    "photo": "",
    "photo2": "",
    "appIds": [],
-   "id": "how-tickets",
+   "id": "how-arrows",
    "title": "How Charms Work",
    "audiences": [
-    "arrows",
+    "arrows"
+   ],
+   "numbered": true,
+   "intro": "Welcome! A charm is how we celebrate something you've done. Every achievement in this guide has its own charm, and each page that follows shows what it takes to earn it.",
+   "sections": [
+    {
+     "heading": "Pick a goal",
+     "text": "Look through the Table of Contents. Each page is one charm, or a small group of charms, with the steps to earn it."
+    },
+    {
+     "heading": "Do the work",
+     "text": "Follow the steps on the page. Ask your mentor or a staff member anytime you have a question."
+    },
+    {
+     "heading": "Report it",
+     "text": "When you have unlocked an achievement, turn in the small sheet. You'll find it in your mentor's bow folder at events. The Reporting Your Achievements page has the details."
+    },
+    {
+     "heading": "Collect your charm and tickets",
+     "text": "Once an achievement is recorded, the charm is yours, along with any tickets listed at the top of its page. Spend them at the Arrow Store!"
+    },
+    {
+     "heading": "Good to know",
+     "text": "A few charms, like 5 in a Row, are counted for you automatically. You don't need to report those.",
+     "highlight": true
+    }
+   ]
+  },
+  {
+   "type": "info",
+   "label": "How It Works",
+   "section": "How It Works",
+   "tickets": null,
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "id": "how-alumni",
+   "title": "How Charms Work",
+   "audiences": [
     "alumni"
    ],
    "numbered": true,
@@ -155,15 +200,15 @@
     },
     {
      "heading": "Do the work",
-     "text": "Follow the steps on the page. Ask a staff member or volunteer anytime you have a question."
+     "text": "Follow the steps on the page. Ask your mentor or a staff member anytime you have a question."
     },
     {
      "heading": "Report it",
-     "text": "When you have unlocked an achievement, turn in the small sheet at the check-in table. The Reporting Your Achievements page has the details."
+     "text": "When you have unlocked an achievement, text the For the Need phone at 805‑328‑0970. The Reporting Your Achievements page has the details."
     },
     {
      "heading": "Collect your charm and tickets",
-     "text": "Once an achievement is recorded, the charm is yours, along with any tickets listed at the top of its page."
+     "text": "Once an achievement is recorded, the charm is yours, along with any tickets listed at the top of its page. Tickets can be cashed out, as explained on the Cashing Out Your Tickets page."
     },
     {
      "heading": "Good to know",
@@ -206,7 +251,7 @@
     },
     {
      "heading": "Report it",
-     "text": "When you have unlocked an achievement, turn in the small sheet at the check-in table. The Reporting Your Achievements page has the details."
+     "text": "When you have unlocked an achievement, text the For the Need phone at 805‑328‑0970. The Reporting Your Achievements page has the details."
     },
     {
      "heading": "Collect your charm",
@@ -406,26 +451,154 @@
    "photo": "",
    "photo2": "",
    "appIds": [],
-   "id": "report",
+   "id": "tickets-arrows",
+   "title": "Tickets & the Arrow Store",
+   "audiences": [
+    "arrows"
+   ],
+   "intro": "Many charms come with tickets. Save them up and spend them on awesome prizes!",
+   "sections": [
+    {
+     "heading": "Earn tickets",
+     "text": "Each charm's page shows how many tickets it is worth. Major Targets are worth 200 and Minor Targets 30."
+    },
+    {
+     "heading": "Spend them at the Arrow Store",
+     "text": "Trade your tickets for prizes. Many of the prizes were requested by Arrows!"
+    },
+    {
+     "heading": "Add to the wishlist",
+     "text": "Want a prize we do not have yet? Add it to the wishlist at the Arrow Store, or text us at 805‑328‑0970."
+    },
+    {
+     "heading": "When you turn 18",
+     "text": "Join the Arrow Alumni Launch Program and cash out your tickets at half their value, to pay for things that help you hit your Major Targets. 1,000 tickets = $500.",
+     "highlight": true
+    }
+   ]
+  },
+  {
+   "type": "info",
+   "label": "How It Works",
+   "section": "How It Works",
+   "tickets": null,
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "id": "tickets-alumni",
+   "title": "Cashing Out Your Tickets",
+   "audiences": [
+    "alumni"
+   ],
+   "intro": "When an Arrow turns 18 and joins the Arrow Alumni Launch Program, the tickets they earned as an Arrow can be cashed out.",
+   "sections": [
+    {
+     "heading": "What is AALP?",
+     "text": "The Arrow Alumni Launch Program helps Arrow Alumni take their next steps toward independence, with mentorship, job opportunities, driver’s license help, and support with transportation."
+    },
+    {
+     "heading": "Cash out at half value",
+     "text": "Tickets cash out at half of their value.",
+     "highlight": true,
+     "big": "1,000 tickets = $500"
+    },
+    {
+     "heading": "What it can pay for",
+     "text": "Essential items that help you hit your Major Targets, like tuition, car insurance, and more."
+    },
+    {
+     "heading": "Hit your targets",
+     "text": "Major Targets are worth 200 tickets each, so every target you hit adds to what you can cash out."
+    },
+    {
+     "heading": "Learn more",
+     "text": "Read all about the program on our website.",
+     "link": {
+      "text": "fortheneed.org/aalp",
+      "url": "https://fortheneed.org/aalp/"
+     }
+    }
+   ]
+  },
+  {
+   "type": "info",
+   "label": "How It Works",
+   "section": "How It Works",
+   "tickets": null,
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "id": "report-arrows",
    "title": "Reporting Your Achievements",
    "audiences": [
-    "arrows",
-    "alumni",
-    "volunteers",
-    "parents"
+    "arrows"
    ],
    "numbered": true,
    "intro": "Unlocked something? We want to celebrate it! Here is how to make sure it gets recorded.",
    "sections": [
     {
-     "heading": "Report what you've unlocked",
+     "heading": "Find the small sheet",
+     "text": "Small sheets are handed out at events and are kept in your mentor's bow folder."
+    },
+    {
+     "heading": "Turn it in",
      "text": "Turn in the small sheet at the check-in table to report the achievements you have unlocked."
     },
     {
      "heading": "Missing a charm?",
      "text": "If a charm you earned has not shown up, text the For the Need phone to report it.",
-     "big": "805-328-0970",
-     "highlight": true
+     "highlight": true,
+     "big": "805-328-0970"
+    }
+   ]
+  },
+  {
+   "type": "info",
+   "label": "How It Works",
+   "section": "How It Works",
+   "tickets": null,
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "id": "report-text",
+   "title": "Reporting Your Achievements",
+   "audiences": [
+    "alumni",
+    "volunteers",
+    "parents"
+   ],
+   "intro": "Unlocked something? We want to celebrate it! Here is how to make sure it gets recorded.",
+   "sections": [
+    {
+     "heading": "Text us",
+     "text": "Text the For the Need phone to report the achievements you have unlocked.",
+     "highlight": true,
+     "big": "805-328-0970"
+    },
+    {
+     "heading": "Missing a charm?",
+     "text": "If a charm you earned has not shown up, text the same number to report it."
     }
    ]
   },
