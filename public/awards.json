@@ -990,12 +990,12 @@
    "label": "Minor Target",
    "section": "Minor Targets",
    "tickets": 30,
-   "intro": "Stay in touch with your mentor between events by connecting on Microsoft Teams. Follow the steps below. If you have any issues, tell staff at 805‑328‑0970.",
+   "intro": "Stay in touch between events! Connect with your mentor on Microsoft Teams. Follow the steps below, or watch the video. If you have any issues, tell staff at 805‑328‑0970.",
    "steps": [
     "Request an account from staff. Text 805‑328‑0970, or ask Allie to make you an account on the spot at an event if she has a moment.",
     "Download the app “Microsoft Teams”.",
     "Open the app and allow notifications.",
-    "Log in to the account staff created for you. Your username is FIRSTNAMEarrow@fortheneed.org, and staff will give you a temporary password.",
+    "Log in to the account staff created for you. Username: FIRSTNAMEarrow@fortheneed.org. Password: Pizza1234",
     "Create your own password. Remember your password!",
     "Send a message to your mentor! Your mentor’s address is MENTORFIRSTNAMEbow@fortheneed.org."
    ],
@@ -1010,7 +1010,12 @@
    "appIds": [
     "b17"
    ],
-   "earnedHow": "Manual"
+   "earnedHow": "Manual",
+   "video": {
+    "text": "Scan or tap to watch how to log in",
+    "url": "https://youtu.be/2K6rwCGgIWg",
+    "qr": "qr-connected-video.png"
+   }
   },
   {
    "id": "arrow-camp",
@@ -1676,12 +1681,12 @@
    "label": "Connection",
    "section": "Connection",
    "tickets": null,
-   "intro": "Stay in touch with your mentor between events by connecting on Microsoft Teams. Follow the steps below. If you have any issues, tell staff at 805‑328‑0970.",
+   "intro": "Stay in touch between events! Connect with your mentor on Microsoft Teams. Follow the steps below, or watch the video. If you have any issues, tell staff at 805‑328‑0970.",
    "steps": [
     "Request an account from staff. Text 805‑328‑0970, or ask Allie to make you an account on the spot at an event if she has a moment.",
     "Download the app “Microsoft Teams”.",
     "Open the app and allow notifications.",
-    "Log in to the account staff created for you, using the username and temporary password staff gives you.",
+    "Log in to the account staff created for you, using the username and password staff gives you.",
     "Create your own password. Remember your password!",
     "Send a message to your mentor! Your mentor’s address is MENTORFIRSTNAMEbow@fortheneed.org."
    ],
@@ -1696,7 +1701,12 @@
    "appIds": [
     "vmn5"
    ],
-   "earnedHow": "Manual"
+   "earnedHow": "Manual",
+   "video": {
+    "text": "Scan or tap to watch how to log in",
+    "url": "https://youtu.be/2K6rwCGgIWg",
+    "qr": "qr-connected-video.png"
+   }
   },
   {
    "id": "vol-refer",

@@ -160,8 +160,13 @@
     // On phones the quote (normally over photo 1) moves into the page body.
     if(opts.mobile && p.quote && p.quote.text) body.append(h('div', {class: 'pg-quote-m'}, quoteBox(p, false)));
 
-    if(p.photo2 || E) body.append(h('div', {class: 'pg-photo2' + (p.photo2 ? '' : ' empty'), 'data-slot': E ? 'photo2' : null}, p.photo2 ? img(p.photo2, '') : 'Photo 2'));
-    else if(p.type === 'charm') body.append(h('div', {class: 'pg-photo2 empty'}, 'Photo 2'));
+    // Video block (QR code for print, tappable link on screen) takes the spot of the second photo.
+    if(p.video && /^https:\/\//.test(p.video.url || '') && !p.photo2){
+      body.append(h('div', {class: 'pg-video'},
+        h('img', {class: 'qr', src: G.src(p.video.qr), alt: 'QR code for the video'}),
+        h('a', {href: p.video.url, target: '_blank', rel: 'noopener noreferrer'}, p.video.text || 'Watch the video')));
+    } else if(p.photo2 || E) body.append(h('div', {class: 'pg-photo2' + (p.photo2 ? '' : ' empty'), 'data-slot': E ? 'photo2' : null}, p.photo2 ? img(p.photo2, '') : 'Photo 2'));
+    else if(p.type === 'charm' && !p.video) body.append(h('div', {class: 'pg-photo2 empty'}, 'Photo 2'));
 
     body.append(h('div', {class: 'pg-foot'}, booklet.title, h('b', null, '|'), String(pageNo)));
     main.append(body);

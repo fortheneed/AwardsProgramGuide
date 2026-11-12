@@ -54,6 +54,12 @@ body{font-family:"Palanquin","Helvetica Neue",Arial,sans-serif;color:var(--ink);
 .pg-photo2 img{width:100%;height:100%;object-fit:cover}
 .pg-photo2.empty{display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
 
+/* Video link + QR code (bottom right of a charm page) */
+.pg-video{position:absolute;right:22px;bottom:42px;width:166px;background:#fff;border:3px solid var(--accent);border-radius:16px;padding:10px 10px 12px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.pg-video .qr{display:block;width:112px;height:112px;margin:0 auto 6px;image-rendering:pixelated}
+.pg-video a{font-size:13px;font-weight:800;color:var(--accent-ink);text-decoration:underline;text-underline-offset:2px;line-height:1.25;display:block}
+.page.mobile .pg-video{position:static;margin:20px auto 4px}
+
 /* Group page: cards for each charm */
 .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:4px 0 12px}
 .cards.n1,.cards.one{grid-template-columns:minmax(0,1fr)}
