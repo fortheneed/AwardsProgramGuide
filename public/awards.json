@@ -319,7 +319,7 @@
      "appId": "b3",
      "tickets": 30,
      "blurb": "Sample line - one sentence about this charm.",
-     "image": ""
+     "image": "poster-b3.png"
     },
     {
      "name": "Make a Resume or Personal Website",
@@ -533,6 +533,29 @@
    "earnedHow": "Manual"
   },
   {
+   "id": "arrow-camp",
+   "type": "charm",
+   "title": "Attended Camp",
+   "audiences": [
+    "arrows"
+   ],
+   "label": "Minor Target",
+   "section": "Minor Targets",
+   "tickets": 30,
+   "intro": "",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "poster-arrow-camp.png",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "earnedHow": "Manual (new charm - not in the app yet)"
+  },
+  {
    "id": "arrow-bullseye",
    "type": "charm",
    "title": "Bullseye Award",
@@ -632,6 +655,59 @@
    "earnedHow": "Automatic"
   },
   {
+   "id": "arrow-clubs",
+   "type": "group",
+   "title": "Club Attendance Charms",
+   "audiences": [
+    "arrows"
+   ],
+   "label": "Club Attendance",
+   "section": "Club Attendance",
+   "tickets": null,
+   "intro": "Each club has its own charm. New clubs and charms are added over time.",
+   "steps": [],
+   "purpose": "",
+   "quote": {
+    "text": "",
+    "by": ""
+   },
+   "image": "",
+   "photo": "",
+   "photo2": "",
+   "appIds": [],
+   "items": [
+    {
+     "name": "Skateboarding Club",
+     "appId": "",
+     "tickets": null,
+     "blurb": "",
+     "image": ""
+    },
+    {
+     "name": "Cubing Club",
+     "appId": "",
+     "tickets": null,
+     "blurb": "Rubik's Cube cubing.",
+     "image": ""
+    },
+    {
+     "name": "Architecture Club",
+     "appId": "",
+     "tickets": null,
+     "blurb": "Build your dream house.",
+     "image": ""
+    },
+    {
+     "name": "Leadership Club",
+     "appId": "",
+     "tickets": null,
+     "blurb": "Coming soon.",
+     "image": ""
+    }
+   ],
+   "earnedHow": "Manual (new charms - not in the app yet)"
+  },
+  {
    "id": "vol-attendance",
    "type": "group",
    "title": "Volunteer Attendance Milestones",
@@ -663,21 +739,21 @@
      "appId": "vm1",
      "tickets": null,
      "blurb": "",
-     "image": ""
+     "image": "poster-m1.png"
     },
     {
      "name": "Silver (4 events)",
      "appId": "vm2",
      "tickets": null,
      "blurb": "",
-     "image": ""
+     "image": "poster-m2.png"
     },
     {
      "name": "Gold (12 events)",
      "appId": "vm3",
      "tickets": null,
      "blurb": "",
-     "image": ""
+     "image": "poster-m3.png"
     }
    ]
   },
@@ -699,7 +775,7 @@
     "text": "",
     "by": ""
    },
-   "image": "",
+   "image": "poster-vol-5row.png",
    "photo": "",
    "photo2": "",
    "appIds": [
@@ -725,7 +801,7 @@
     "text": "",
     "by": ""
    },
-   "image": "",
+   "image": "poster-vol-6yr.png",
    "photo": "",
    "photo2": "",
    "appIds": [
@@ -751,7 +827,7 @@
     "text": "",
     "by": ""
    },
-   "image": "",
+   "image": "poster-vol-100hrs.png",
    "photo": "",
    "photo2": "",
    "appIds": [
@@ -777,7 +853,7 @@
     "text": "",
     "by": ""
    },
-   "image": "",
+   "image": "poster-vol-donate.png",
    "photo": "",
    "photo2": "",
    "appIds": [
@@ -803,7 +879,7 @@
     "text": "",
     "by": ""
    },
-   "image": "",
+   "image": "poster-vol-teacher.png",
    "photo": "",
    "photo2": "",
    "appIds": [
@@ -856,7 +932,7 @@
     "text": "",
     "by": ""
    },
-   "image": "",
+   "image": "poster-vol-spanish.png",
    "photo": "",
    "photo2": "",
    "appIds": [
@@ -883,7 +959,7 @@
     "text": "",
     "by": ""
    },
-   "image": "",
+   "image": "poster-vol-pressure.png",
    "photo": "",
    "photo2": "",
    "appIds": [
@@ -935,7 +1011,7 @@
     "text": "",
     "by": ""
    },
-   "image": "",
+   "image": "poster-vol-mentee.png",
    "photo": "",
    "photo2": "",
    "appIds": [
@@ -962,7 +1038,7 @@
     "text": "",
     "by": ""
    },
-   "image": "",
+   "image": "poster-vol-livescan.png",
    "photo": "",
    "photo2": "",
    "appIds": [
@@ -988,7 +1064,7 @@
     "text": "",
     "by": ""
    },
-   "image": "",
+   "image": "poster-vol-mandated.png",
    "photo": "",
    "photo2": "",
    "appIds": [
@@ -1014,7 +1090,7 @@
     "text": "",
     "by": ""
    },
-   "image": "",
+   "image": "poster-vol-sapt.png",
    "photo": "",
    "photo2": "",
    "appIds": [
@@ -1041,7 +1117,7 @@
     "text": "",
     "by": ""
    },
-   "image": "",
+   "image": "poster-vol-cpr.png",
    "photo": "",
    "photo2": "",
    "appIds": [
@@ -1067,7 +1143,7 @@
     "text": "",
     "by": ""
    },
-   "image": "",
+   "image": "poster-vol-connected.png",
    "photo": "",
    "photo2": "",
    "appIds": [
@@ -1093,7 +1169,7 @@
     "text": "",
     "by": ""
    },
-   "image": "",
+   "image": "poster-vol-refer.png",
    "photo": "",
    "photo2": "",
    "appIds": [
@@ -1118,7 +1194,7 @@
     "text": "",
     "by": ""
    },
-   "image": "",
+   "image": "poster-par-contact.png",
    "photo": "",
    "photo2": "",
    "appIds": [],
